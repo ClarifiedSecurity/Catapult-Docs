@@ -730,22 +730,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-playbook" class="md-nav__link">
-    Example Playbook
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    License
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#author-information" class="md-nav__link">
-    Author Information
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
@@ -953,22 +939,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-playbook" class="md-nav__link">
-    Example Playbook
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    License
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#author-information" class="md-nav__link">
-    Author Information
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
@@ -989,29 +961,19 @@
 
 
 <h1 id="role-name">Role Name</h1>
-<p>COMING SOON
-A brief description of the role goes here.</p>
+<p>This is a universal role that is included in <a href="https://github.com/ClarifiedSecurity/catapult/blob/main/defaults/start.yml">start.yml</a>. It is used to run different general operating system configuration tasks. Such as configuring hostname, activation etc.</p>
 <h2 id="requirements">Requirements</h2>
-<p>COMING SOON
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.</p>
+<p>None</p>
 <h2 id="role-variables">Role Variables</h2>
-<p>COMING SOON
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.</p>
+<p>Refer to <a href="https://github.com/ClarifiedSecurity/clarified.core/blob/main/clarified/core/roles/os_configuration/defaults/main.yml">defaults/main.yml</a> for the full list of variables.</p>
 <h2 id="dependencies">Dependencies</h2>
-<p>COMING SOON
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.</p>
-<h2 id="example-playbook">Example Playbook</h2>
-<p>COMING SOON
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:</p>
-<pre><code>- hosts: servers
-  roles:
-     - { role: username.rolename, x: 42 }
+<p>None</p>
+<h2 id="example">Example</h2>
+<p>Since this role already gets included in <code>start.yml</code> there is no need to include it in your playbook. However, if you want to run it separately, you can do so with:</p>
+<pre><code class="language-yaml">- name: Including os_configuration role
+  include_role:
+    name: clarified.core.os_configuration
 </code></pre>
-<h2 id="license">License</h2>
-<p>AGPL-3.0-or-later</p>
-<h2 id="author-information">Author Information</h2>
-<p>COMING SOON
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).</p>
 
 
 
