@@ -885,7 +885,7 @@
 
 <h1 id="catapult-customizer-example">Catapult Customizer Example</h1>
 <p>This is an example <a href="https://github.com/ClarifiedSecurity/catapult-customizer">repo</a> to show how to Customize <a href="https://github.com/ClarifiedSecurity/catapult">Catapult</a> for your organization's or project's needs. To use this repo you need to create your own Git project (in a Git server of your choice) and then fill it out with the examples shown here. After that is done fill out <code>MAKEVAR_CATAPULT_CUSTOMIZER_REPO</code> in your Catapult's <code>.makerc-vars</code> file to include the customizations.</p>
-<p><strong>DELETE ALL CUSTOMIZATION FOLDER AND FILE EXAMPLES THAT YOU WILL NOT BE USING</strong></p>
+<p><strong>DELETE ALL CUSTOMIZATION FOLDER AND FILE EXAMPLES THAT YOU WILL NOT BE USING</strong> - Otherwise empty folder will be included overriding the default files.</p>
 <p>The structure of the customization repo is as follows:</p>
 <h2 id="folders">Folders</h2>
 <ul>
@@ -920,7 +920,7 @@
 <h2 id="files">Files</h2>
 <ul>
 <li>
-<p><code>example.makerc-vars</code> - When using non-default .makerc-vars then make sure that example.makerc-vars is also defined in the Catapult Customizer repo because there are helper scripts that will check if your .makerc-vars contains all of the variables based on the example.makerc-vars.</p>
+<p><code>example.makerc-vars</code> - When using non-default .makerc-vars then make sure that `example.makerc-vars is also defined in the Catapult Customizer repo because there are helper scripts that will check if your .makerc-vars contains all of the variables based on the example.makerc-vars.</p>
 </li>
 <li>
 <p><code>start.yml</code> - In some rare cases you might want to customize the deployment tree of Catapult. For that you can create your own start.yml file and it will be used instead of the default one. Refer to the default <a href="https://github.com/ClarifiedSecurity/Catapult/blob/main/defaults/start.yml">start.yml</a> as an example.</p>
