@@ -976,21 +976,33 @@ sudo apt install git make jq -y
 <pre><code class="language-sh">sudo pacman -S git make jq
 </code></pre>
 <h3 id="windows-subsystem-for-linux">Windows Subsystem for Linux</h3>
-<p>From an admin PowerShell run:</p>
-<pre><code class="language-powershell">wsl --install
+<p>Log in interactively (over RDP or locally) to your Windows machine with an account that has admin rights and run the following commands in PowerShell. The first login needs to be with an admin account because the WSL installation needs to be done with admin rights. After the first installation you can use a non-admin account to log in.</p>
+<pre><code class="language-powershell">Enable-WindowsOptionalFeature -FeatureName Microsoft-Windows-Subsystem-Linux -Online -NoRestart
+wsl --install
 </code></pre>
 <ul>
 <li>Restart Windows</li>
-<li>After restart Ubuntu setup should automatically run, if no then run Ubuntu manually from the start menu and finalize the setup.</li>
-<li>From Ubuntu terminal run:</li>
+<li>If your user account <strong>IS</strong> in the Administrators just log in, start Ubuntu from the start menu and follow the instructions to finalize the setup.</li>
+<li>If your user account <strong>IS NOT</strong> in the Administrators group you need to run the following commands in non-admin PowerShell after your login:</li>
 </ul>
-<p><code>sh
-  sudo apt update &amp;&amp; \
-  sudo apt install git make jq keychain -y</code></p>
+<pre><code class="language-powershell">wsl --update
+wsl --install -d Ubuntu
+</code></pre>
+<ul>
+<li>
+<p>After that follow the instructions to finalize the setup.</p>
+</li>
+<li>
+<p>When your Ubuntu shell is ready. Run the following commands to install the needed dependencies:</p>
+</li>
+</ul>
+<pre><code class="language-sh">sudo apt update &amp;&amp; \
+sudo apt install git make jq keychain -y
+</code></pre>
 <ul>
 <li>Make sure all needed SSH keypairs are in <code>~/.ssh</code> folder in the WSL Ubuntu and ssh-agent is started. For easy-to-use SSH Agent you can follow this <a href="https://esc.sh/blog/ssh-agent-windows10-wsl2/">guide</a>. You can use this method to add multiple keys to the SSH Agent.</li>
 </ul>
-<p><strong>PS - On Windows we suggest using <a href="https://code.visualstudio.com/">VSCode</a> with the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">Remote - WSL</a> extension to edit the files in WSL and <a href="https://learn.microsoft.com/en-us/windows/terminal/install">Windows Terminal</a> for easy connection to WSL.</strong></p>
+<p>When WSL is configured successfully then I'll show up in Windows Explorer as a network drive. You can use it to copy files between your host and the WSL system. On Windows we suggest using <a href="https://code.visualstudio.com/">VSCode</a> with the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">Remote - WSL</a> extension to edit the files in WSL and <a href="https://learn.microsoft.com/en-us/windows/terminal/install">Windows Terminal</a> for easy connection to WSL.</p>
 <h3 id="macos">MacOS</h3>
 <pre><code class="language-sh">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
 brew install git make jq

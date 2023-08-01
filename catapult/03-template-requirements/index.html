@@ -922,7 +922,7 @@
 <p><code>MaxAuthTries</code> set to <code>20</code> in <code>C:/ProgramData/ssh/sshd_config</code> -- A lot of users will have more than 6 keys in their SSH agent and the default <code>MaxAuthTries</code> of 6 will cause Catapult to fail to connect to the VM. The value must not be 20 but it most likely must be higher than 6.</p>
 </li>
 <li>
-<p>(Optional) <a href="https://chocolatey.org/install">Chocolatey</a> installed -- It's not a hard requirement but it's really useful to have Chocolatey installed on your Windows VMs. Catapult will use Chocolatey to install the required software on the VMs. Chocolatey can also be used to install the OpenSSH server with <code>choco install openssh -params /SSHServerFeature -y</code></p>
+<p>(Optional) <a href="https://chocolatey.org/install">Chocolatey</a> installed -- It's not a hard requirement but it's really useful to have Chocolatey installed on your Windows VMs. Catapult can use Chocolatey to install the required software on the VMs. Chocolatey can also be used to install the OpenSSH server on the base template with <code>choco install openssh -params /SSHServerFeature -y</code></p>
 </li>
 </ul>
 <h3 id="linux">Linux</h3>
@@ -934,7 +934,7 @@
 <p><code>MaxAuthTries</code> set to <code>20</code> in <code>/etc/ssh/sshd_config</code> -- Same as with Windows.</p>
 </li>
 <li>
-<p><code>PermitRootLogin</code> set to <code>yes</code> in <code>/etc/ssh/sshd_config</code> -- Catapult needs to be able to login as root to the VMs the first time. After that Catapult can be used to crete new accounts and disable root login.</p>
+<p><code>PermitRootLogin</code> set to <code>yes</code> in <code>/etc/ssh/sshd_config</code> -- Catapult needs to be able to login as root to the VMs the first time. After that Catapult can be used to create new accounts and disable root login.</p>
 </li>
 </ul>
 
