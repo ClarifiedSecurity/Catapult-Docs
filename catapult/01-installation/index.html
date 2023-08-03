@@ -998,10 +998,10 @@
 <h2 id="prerequisites">Prerequisites</h2>
 <h3 id="ubuntudebian">Ubuntu/Debian</h3>
 <pre><code class="language-sh">sudo apt update &amp;&amp; \
-sudo apt install git make jq curl -y
+sudo apt install git make jq curl sudo -y
 </code></pre>
 <h3 id="arch">Arch</h3>
-<pre><code class="language-sh">sudo pacman -S git make curl jq
+<pre><code class="language-sh">sudo pacman -S git make curl sudo jq
 </code></pre>
 <h3 id="windows-subsystem-for-linux">Windows Subsystem for Linux</h3>
 <p>Log in interactively (over RDP or locally) to your Windows machine with an account that has admin rights and run the following commands in PowerShell. The first login needs to be with an admin account because the WSL installation needs to be done with admin rights. After the first installation you can use a non-admin account to log in.</p>
@@ -1025,17 +1025,23 @@ wsl --install -d Ubuntu
 </li>
 </ul>
 <pre><code class="language-sh">sudo apt update &amp;&amp; \
-sudo apt install git make jq curl keychain -y
+sudo apt install git make jq curl sudo keychain -y
 </code></pre>
 <ul>
 <li>Make sure all needed SSH keypairs are in <code>~/.ssh</code> folder in the WSL Ubuntu and ssh-agent is started. For easy-to-use SSH Agent you can follow this <a href="https://esc.sh/blog/ssh-agent-windows10-wsl2/">guide</a>. You can use this method to add multiple keys to the SSH Agent.</li>
 </ul>
 <p>When WSL is configured successfully then I'll show up in Windows Explorer as a network drive. You can use it to copy files between your host and the WSL system. On Windows we suggest using <a href="https://code.visualstudio.com/">VSCode</a> with the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">Remote - WSL</a> extension to edit the files in WSL and <a href="https://learn.microsoft.com/en-us/windows/terminal/install">Windows Terminal</a> for easy connection to WSL.</p>
 <h3 id="macos">MacOS</h3>
-<pre><code class="language-sh">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
-brew install git make jq curl
+<ul>
+<li>Install brew and after installing brew make sure to add it to path with the commands it provides.</li>
+</ul>
+<pre><code class="language-zsh">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
 </code></pre>
-<p>After installing brew make sure to add it to path with the commands it provides.</p>
+<ul>
+<li>Install required packaes with brew:</li>
+</ul>
+<pre><code class="language-zsh">brew install git make jq curl
+</code></pre>
 <h2 id="install">Install</h2>
 <ul>
 <li>Make sure you have a working <a href="https://keepassxc.org/">KeePass</a> database with a key file. Catapult will not work without the KeePass key file so make sure your database is configured to use one.</li>
