@@ -924,7 +924,7 @@
 <p><code>container</code> - Contains .custom_aliases file that will be copied into the container. Refer to the <a href="https://github.com/ClarifiedSecurity/Catapult/blob/main/container/home/builder/.default_aliases">.default_aliases</a> file as an example on how to create .custom_aliases.</p>
 </li>
 <li>
-<p><code>docker</code> - Contains custom docker-compose-extra.yml to add extra environment variables to the container. Refer to the default <a href="https://github.com/ClarifiedSecurity/Catapult/blob/main/defaults/docker-compose-extra.yml">docker-compose-extra.yml</a> for an example.</p>
+<p><code>docker</code> - Contains custom docker-compose-extra.yml to add extra environment variables to the container. Refer to the default <a href="https://github.com/ClarifiedSecurity/Catapult/blob/main/defaults/docker-compose-extra.yml">docker-compose-extra.yml</a> for an example. Also contains docker-compose-personal.yml that will be created on first run. This file is used to store personal environment variables that you don't want to commit to the repo.</p>
 </li>
 <li>
 <p><code>docker-entrypoints</code> - Contains custom docker-entrypoint scripts that will run inside the container during startup and <code>make shell</code>. Refer to default <a href="https://github.com/ClarifiedSecurity/Catapult/tree/main/scripts/entrypoints">entrypoint</a> scripts for examples.</p>
