@@ -350,6 +350,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#per-environmentprojectdatacenter-etc-template-requirements" class="md-nav__link">
+    Per-environment/project/datacenter etc. template requirements
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -936,6 +943,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#per-environmentprojectdatacenter-etc-template-requirements" class="md-nav__link">
+    Per-environment/project/datacenter etc. template requirements
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -979,6 +993,8 @@
 <p><code>PermitRootLogin</code> set to <code>yes</code> in <code>/etc/ssh/sshd_config</code> -- Catapult needs to be able to login as root to the VMs the first time. After that Catapult can be used to create new accounts and disable root login.</p>
 </li>
 </ul>
+<h2 id="per-environmentprojectdatacenter-etc-template-requirements">Per-environment/project/datacenter etc. template requirements</h2>
+<p>We recommend applying the <a href="https://github.com/ClarifiedSecurity/clarified.core/tree/main/clarified/core/roles/template_os_configuration">template_os_configuration</a> the specific project templates. It contains some prerequisites for different <code>clarified.core</code> roles that you might otherwise need to install before using those roles.</p>
 
 
 

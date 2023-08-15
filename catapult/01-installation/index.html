@@ -1058,30 +1058,29 @@ sudo apt install git make jq curl sudo keychain -y
 </code></pre>
 <h2 id="install">Install</h2>
 <ul>
-<li>Make sure you have a working <a href="https://keepassxc.org/">KeePass</a> database with a key file. Catapult will not work without the KeePass key file so make sure your database is configured to use one.</li>
-<li>Make sure all of the SSH keypairs you need are loaded ssh-agent, because Catapult will use them to connect to the VMs.</li>
+<li>Make sure all of the SSH keypairs you need are loaded into your ssh-agent. Catapult will use them to connect to the VMs.</li>
 <li>Clone the project from GitHub with:</li>
 </ul>
-<pre><code class="language-sh">git clone https://github.com/ClarifiedSecurity/catapult
+<pre><code class="language-sh">git clone https://github.com/ClarifiedSecurity/catapult --depth 1
 cd catapult
 </code></pre>
 <ul>
-<li>Create your own variables file based on the example but don't delete the example:</li>
+<li>Create your own variables file based on the example but don't delete the example file:</li>
 </ul>
 <pre><code class="language-sh">cp .makerc-vars.example .makerc-vars
 </code></pre>
 <ul>
-<li>
-<p>Fill out all of the required vars in <code>.makerc-vars</code>, To avoid any syntax errors don't leave a space after the <code>:=</code> sign. <strong>Read the comments for each variable for more information.</strong> All of the <code>KEEPASS_*</code> variables are case sensitive.</p>
-</li>
-<li>
-<p>Install all of the required dependencies for your host with:</p>
-</li>
+<li>Install all of the required dependencies for your host with:</li>
 </ul>
 <pre><code class="language-sh">make prepare
 </code></pre>
 <ul>
-<li>Start the Catapult container and connect to it with:</li>
+<li>
+<p>If you didn't configure Keepass automatically during <code>make prepare</code> then fill out missing vars in <code>.makerc-vars</code>. <strong>Read the comments for each variable for more information.</strong> All of the <code>KEEPASS_*</code> variables are case sensitive.</p>
+</li>
+<li>
+<p>Start the Catapult container and connect to it with:</p>
+</li>
 </ul>
 <pre><code class="language-sh">make start
 </code></pre>
