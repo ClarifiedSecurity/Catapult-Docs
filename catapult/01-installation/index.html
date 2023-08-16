@@ -296,26 +296,12 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#quickstart" class="md-nav__link">
+    Quickstart
   </a>
   
-    <nav class="md-nav" aria-label="Prerequisites">
+    <nav class="md-nav" aria-label="Quickstart">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ubuntudebian" class="md-nav__link">
-    Ubuntu/Debian
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#arch" class="md-nav__link">
-    Arch
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#windows-subsystem-for-linux" class="md-nav__link">
@@ -324,22 +310,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#macos" class="md-nav__link">
-    MacOS
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
-    Install
-  </a>
   
 </li>
       
@@ -938,26 +910,12 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#quickstart" class="md-nav__link">
+    Quickstart
   </a>
   
-    <nav class="md-nav" aria-label="Prerequisites">
+    <nav class="md-nav" aria-label="Quickstart">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ubuntudebian" class="md-nav__link">
-    Ubuntu/Debian
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#arch" class="md-nav__link">
-    Arch
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#windows-subsystem-for-linux" class="md-nav__link">
@@ -966,22 +924,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#macos" class="md-nav__link">
-    MacOS
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
-    Install
-  </a>
   
 </li>
       
@@ -1008,24 +952,30 @@
 
 
 <h1 id="installation">Installation</h1>
-<p>Catapult can run in <code>Linux</code>, <code>Windows (WSL)</code> or <code>MacOS</code>. Recommended host OS is Ubuntu 22.04 LTS.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<h3 id="ubuntudebian">Ubuntu/Debian</h3>
-<pre><code class="language-sh">sudo apt update &amp;&amp; \
-sudo apt install git make jq curl sudo -y
+<p>Catapult can run in <code>Linux</code>, <code>Windows (WSL)</code> or <code>MacOS</code>. Recommended host OS is Ubuntu 22.04 LTS. For Windows follow the <a href="#windows-subsystem-for-linux">Windows Subsystem for Linux</a> section to pre-configure WSL and then return to <a href="#quickstart">Quickstart</a>.</p>
+<h2 id="quickstart">Quickstart</h2>
+<ul>
+<li>Make sure all of the SSH keypairs you need are loaded into your ssh-agent. Catapult will use them to connect to the VMs.</li>
+<li>Make sure you have <code>git</code> installed.</li>
+<li>Run the following commands to install and configure Catapult:</li>
+</ul>
+<pre><code class="language-sh">git clone https://github.com/ClarifiedSecurity/catapult --depth 1
+cd catapult
+./install.sh
 </code></pre>
-<h3 id="arch">Arch</h3>
-<pre><code class="language-sh">sudo pacman -S git make curl sudo jq
-</code></pre>
+<ul>
+<li>You can run <code>./install.sh</code> multiple times until it finishes without errors.</li>
+</ul>
+<p>If you didn't configure Keepass automatically during the installation then fill out missing vars in <code>.makerc-vars</code>. <strong>Read the comments for each variable for more information.</strong> All of the <code>KEEPASS_*</code> variables are case sensitive.</p>
 <h3 id="windows-subsystem-for-linux">Windows Subsystem for Linux</h3>
-<p>Log in interactively (over RDP or locally) to your Windows machine with an account that has admin rights and run the following commands in PowerShell. The first login needs to be with an admin account because the WSL installation needs to be done with admin rights. After the first installation you can use a non-admin account to log in.</p>
+<p>Log in interactively (over RDP or locally) to your Windows machine with an account that has <strong>admin</strong> rights and run the following commands in PowerShell. The first login needs to be with an <strong>admin</strong> account because the WSL installation needs to be done with admin rights. After the first installation you can use a non-admin account to log in.</p>
 <pre><code class="language-powershell">Enable-WindowsOptionalFeature -FeatureName Microsoft-Windows-Subsystem-Linux -Online -NoRestart
 wsl --install
 </code></pre>
 <ul>
 <li>Restart Windows</li>
-<li>If your user account <strong>IS</strong> in the Administrators just log in, start Ubuntu from the start menu and follow the instructions to finalize the setup.</li>
-<li>If your user account <strong>IS NOT</strong> in the Administrators group you need to run the following commands in non-admin PowerShell after your login:</li>
+<li>If your user account <strong>IS</strong> in the Administrators group just log in, start Ubuntu from the start menu and follow the instructions to finalize the setup.</li>
+<li>If your user account <strong>IS NOT</strong> in the Administrators group you need to run the following commands in <strong>non-admin</strong> PowerShell after your login:</li>
 </ul>
 <pre><code class="language-powershell">wsl --update
 wsl --install -d Ubuntu
@@ -1035,60 +985,13 @@ wsl --install -d Ubuntu
 <p>After that follow the instructions to finalize the setup.</p>
 </li>
 <li>
-<p>When your Ubuntu shell is ready. Run the following commands to install the needed dependencies:</p>
+<p>Make sure all needed SSH keypairs are in <code>~/.ssh</code> folder in the WSL Ubuntu and ssh-agent is started. For easy-to-use SSH Agent you can follow this <a href="https://esc.sh/blog/ssh-agent-windows10-wsl2/">guide</a>. You can use this method to add multiple keys to the SSH Agent.</p>
 </li>
-</ul>
-<pre><code class="language-sh">sudo apt update &amp;&amp; \
-sudo apt install git make jq curl sudo keychain -y
-</code></pre>
-<ul>
-<li>Make sure all needed SSH keypairs are in <code>~/.ssh</code> folder in the WSL Ubuntu and ssh-agent is started. For easy-to-use SSH Agent you can follow this <a href="https://esc.sh/blog/ssh-agent-windows10-wsl2/">guide</a>. You can use this method to add multiple keys to the SSH Agent.</li>
 </ul>
 <p>When WSL is configured successfully then I'll show up in Windows Explorer as a network drive. You can use it to copy files between your host and the WSL system. On Windows we suggest using <a href="https://code.visualstudio.com/">VSCode</a> with the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">Remote - WSL</a> extension to edit the files in WSL and <a href="https://learn.microsoft.com/en-us/windows/terminal/install">Windows Terminal</a> for easy connection to WSL.</p>
-<h3 id="macos">MacOS</h3>
 <ul>
-<li>Install brew and after installing brew make sure to add it to path with the commands it provides.</li>
+<li>When your Ubuntu shell is ready, return to <a href="#quickstart">Quickstart</a></li>
 </ul>
-<pre><code class="language-zsh">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
-</code></pre>
-<ul>
-<li>Install required packaes with brew:</li>
-</ul>
-<pre><code class="language-zsh">brew install git make jq curl
-</code></pre>
-<h2 id="install">Install</h2>
-<ul>
-<li>Make sure all of the SSH keypairs you need are loaded into your ssh-agent. Catapult will use them to connect to the VMs.</li>
-<li>Clone the project from GitHub with:</li>
-</ul>
-<pre><code class="language-sh">git clone https://github.com/ClarifiedSecurity/catapult --depth 1
-cd catapult
-</code></pre>
-<ul>
-<li>Create your own variables file based on the example but don't delete the example file:</li>
-</ul>
-<pre><code class="language-sh">cp .makerc-vars.example .makerc-vars
-</code></pre>
-<ul>
-<li>Install all of the required dependencies for your host with:</li>
-</ul>
-<pre><code class="language-sh">make prepare
-</code></pre>
-<ul>
-<li>
-<p>If you didn't configure Keepass automatically during <code>make prepare</code> then fill out missing vars in <code>.makerc-vars</code>. <strong>Read the comments for each variable for more information.</strong> All of the <code>KEEPASS_*</code> variables are case sensitive.</p>
-</li>
-<li>
-<p>Start the Catapult container and connect to it with:</p>
-</li>
-</ul>
-<pre><code class="language-sh">make start
-</code></pre>
-<ul>
-<li>Connect to an already started Catapult container with:</li>
-</ul>
-<pre><code class="language-sh">make shell
-</code></pre>
 <h2 id="caveats">Caveats</h2>
 <p>If you are using a Linux VM with a user ID that is not 1000 (you can check it with the <code>id</code> command) you need to build the Catapult Docker image yourself with the <code>make build</code> command.</p>
 
