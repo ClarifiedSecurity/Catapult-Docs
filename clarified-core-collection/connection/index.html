@@ -19,7 +19,7 @@
     
     
       
-        <title>Role Name - Catapult Docs</title>
+        <title>connection - Catapult Docs</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#role-name" class="md-skip">
+        <a href="#connection" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Role Name
+              connection
             
           </span>
         </div>
@@ -482,12 +482,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Role Name
+          connection
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Role Name
+        connection
       </a>
       
         
@@ -527,22 +527,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-playbook" class="md-nav__link">
-    Example Playbook
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    License
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#author-information" class="md-nav__link">
-    Author Information
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
@@ -946,22 +932,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-playbook" class="md-nav__link">
-    Example Playbook
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    License
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#author-information" class="md-nav__link">
-    Author Information
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
@@ -981,30 +953,24 @@
                   
 
 
-<h1 id="role-name">Role Name</h1>
-<p>COMING SOON
-A brief description of the role goes here.</p>
+<h1 id="connection">connection</h1>
+<p>This role is used to set connection parameters for the VM after cloning. It parses the correct parameters based on if the VM was just cloned or if it is already been customized. This role can also be used to connect to an already exiting virtual or physical machine. All of the connections are made over SSH.</p>
 <h2 id="requirements">Requirements</h2>
-<p>COMING SOON
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.</p>
+<p>Credentials for the VM to connect to. This can be either a username and password or a username and SSH key. The VM must also be configured to allow SSH connections.</p>
 <h2 id="role-variables">Role Variables</h2>
-<p>COMING SOON
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.</p>
+<p><code>template_username</code> - The username to connect the freshly cloned machine to run post-configuration there. Usually root or Administrator.
+<code>template_password</code> - The password to connect the freshly cloned machine to run post-configuration there. Usually root or Administrator.
+<code>connection_address</code> - The IP address of the machine to connect to.</p>
+<p><code>ansible_deployer_username</code> - The username to connect to the machine with once the post-configuration is complete. Usually something that gets created in the <code>clarified.core.accounts</code> role.
+<code>ansible_deployer_password</code> - The password to connect to the machine with once the post-configuration is complete. Usually something that gets created in the <code>clarified.core.accounts</code> role.</p>
 <h2 id="dependencies">Dependencies</h2>
-<p>COMING SOON
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.</p>
-<h2 id="example-playbook">Example Playbook</h2>
-<p>COMING SOON
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:</p>
-<pre><code>- hosts: servers
-  roles:
-     - { role: username.rolename, x: 42 }
+<p>none</p>
+<h2 id="example">Example</h2>
+<p>Since this role already gets included in <code>start.yml</code> there is no need to include it in your playbook. However, if you want to run it separately, you can do so with:</p>
+<pre><code class="language-yaml">- name: Including connection role
+  include_role:
+    name: clarified.core.connection
 </code></pre>
-<h2 id="license">License</h2>
-<p>AGPL-3.0-or-later</p>
-<h2 id="author-information">Author Information</h2>
-<p>COMING SOON
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).</p>
 
 
 
