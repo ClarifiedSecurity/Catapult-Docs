@@ -584,6 +584,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../finalize/" class="md-nav__link">
         Role Name
       </a>
@@ -954,9 +968,19 @@
 
 
 <h1 id="join_domain">join_domain</h1>
-<p>This is a role for adding Windows and Linux hosts to Active Directory (AD) domains.</p>
+<p>This is a role for:</p>
+<ul>
+<li>Adding Windows and Linux hosts to Active Directory (AD) domains.</li>
+<li>Fixing broken AD domain joins and re-joining machines to domain.</li>
+</ul>
 <h2 id="requirements">Requirements</h2>
-<p>A variable called <code>domain</code> or <code>ad_domain_name</code> (if the DNS domain name does not match the AD domain name) must be defined pointing to the AD domain name.</p>
+<p>Following variables are required:</p>
+<ul>
+<li><code>domain</code> - Points to the AD domain name that matches your environments DNS domain.</li>
+<li><code>ad_domain_name</code> - Points to the AD domain name if it does <strong>NOT</strong> match your environments DNS domain.</li>
+<li><code>domain_admin_username</code> - Username of an account that has privileges to join computers to the domain and create/delete computer objects.</li>
+<li><code>domain_admin_password</code> - Password of the domain_admin_username.</li>
+</ul>
 <h2 id="role-variables">Role Variables</h2>
 <p>Refer to the <a href="https://github.com/ClarifiedSecurity/clarified.core/blob/main/clarified/core/roles/join_domain/defaults/main.yml">defaults/main.yml</a> file for a list of variables and their default values.</p>
 <p>One special variable not defined in defaults is <code>computer_ou</code>. This variable is used to specify the OU where the computer object should be created. If this variable is not defined, the computer object will be created in the default Computers container.</p>
