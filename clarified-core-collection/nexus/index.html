@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../customization_single_role/">
+        <link rel="prev" href="../linux_xrdp_server/">
       
       
-        <link rel="next" href="../docker/">
+        <link rel="next" href="../os_configuration/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Role Name - Catapult Docs</title>
+        <title>nexus - Catapult Docs</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#role-name" class="md-skip">
+        <a href="#nexus" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Role Name
+              nexus
             
           </span>
         </div>
@@ -701,29 +701,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Role Name
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../deploy_vars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,68 +712,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    Role Variables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    Dependencies
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-playbook" class="md-nav__link">
-    Example Playbook
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    License
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#author-information" class="md-nav__link">
-    Author Information
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -943,9 +861,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../nexus/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    nexus
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -954,6 +892,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-variables" class="md-nav__link">
+    Role Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Role Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-variables-for-installation" class="md-nav__link">
+    Required Variables for Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-variables-for-configuration" class="md-nav__link">
+    Required Variables for Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-variables-for-ldap-configuration" class="md-nav__link">
+    Required Variables for LDAP Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1224,6 +1237,33 @@
     Role Variables
   </a>
   
+    <nav class="md-nav" aria-label="Role Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-variables-for-installation" class="md-nav__link">
+    Required Variables for Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-variables-for-configuration" class="md-nav__link">
+    Required Variables for Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-variables-for-ldap-configuration" class="md-nav__link">
+    Required Variables for LDAP Configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1234,22 +1274,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-playbook" class="md-nav__link">
-    Example Playbook
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    License
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#author-information" class="md-nav__link">
-    Author Information
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
@@ -1269,30 +1295,74 @@
                   
 
 
-<h1 id="role-name">Role Name</h1>
-<p>COMING SOON
-A brief description of the role goes here.</p>
+<h1 id="nexus">nexus</h1>
+<p>This is a role for installing and configuring <a href="https://help.sonatype.com/repomanager3">Nexus Repository Manager 3</a> on a in Docker on a Ubuntu/Debian host. This role can be used for following:</p>
+<ul>
+<li>Install Nexus with Docker Compose</li>
+<li>Run initial configuration of Nexus (optional)</li>
+<li>Install LDAP configuration for Nexus (optional)</li>
+</ul>
 <h2 id="requirements">Requirements</h2>
-<p>COMING SOON
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.</p>
+<ul>
+<li>Tested on Ubuntu 22.04 but should work on any Debian based system.</li>
+<li>Requires an external reverse proxy (nginx, traefik, haproxy, caddy etc.) in front of Nexus to handle GUI access and TLS termination.</li>
+</ul>
 <h2 id="role-variables">Role Variables</h2>
-<p>COMING SOON
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.</p>
+<p>Refer to <a href="https://github.com/ClarifiedSecurity/clarified.core/blob/main/clarified/core/roles/nexus/defaults/main.yml">defaults/main.yml</a> for the full list of variables, their default values and descriptions.</p>
+<h3 id="required-variables-for-installation">Required Variables for Installation</h3>
+<ul>
+<li><code>docker_network</code></li>
+</ul>
+<h3 id="required-variables-for-configuration">Required Variables for Configuration</h3>
+<ul>
+<li><code>fqdn</code></li>
+<li><code>nexus_admin_password</code></li>
+</ul>
+<h3 id="required-variables-for-ldap-configuration">Required Variables for LDAP Configuration</h3>
+<ul>
+<li><code>nexus_ldap_name</code></li>
+<li><code>nexus_ldap_host</code></li>
+<li><code>nexus_ldap_search_base</code></li>
+<li><code>nexus_bind_user_dn</code></li>
+<li><code>nexus_bind_user_password</code></li>
+<li><code>nexus_group_dn_under_under_searchbase</code></li>
+<li><code>nexus_nexus_ldap_administrators_group</code></li>
+</ul>
+<p>Alternatively the whole <code>nexus_ldap_configuration</code> block can be defined as a single variable to configure LDAP. See <a href="https://github.com/ClarifiedSecurity/clarified.core/blob/main/clarified/core/roles/nexus/defaults/main.yml">defaults/main.yml</a> for the full list of variables.</p>
 <h2 id="dependencies">Dependencies</h2>
-<p>COMING SOON
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.</p>
-<h2 id="example-playbook">Example Playbook</h2>
-<p>COMING SOON
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:</p>
-<pre><code>- hosts: servers
-  roles:
-     - { role: username.rolename, x: 42 }
+<ul>
+<li>Dependes on Docker and Docker Compose being installed on the host. Docker can be installed using the <a href="https://github.com/ClarifiedSecurity/clarified.core/tree/main/clarified/core/roles/docker">clarified.core.docker</a> role.</li>
+</ul>
+<h2 id="example">Example</h2>
+<pre><code class="language-yaml"># Installs Nexus without configuring it. Initial configuration can be done manually from the web GUI.
+- name: Installing Nexus...
+  ansible.builtin.include_role:
+    name: clarified.core.nexus
+
+# Installs Nexus and runs initial configuration on it.
+- name: Installing &amp; configuring Nexus...
+  ansible.builtin.include_role:
+    name: clarified.core.nexus
+    vars:
+      configure: true
+      nexus_admin_password: # lookup to a predefined password that will be applied to the admin user on first run
+
+# Installs Nexus and runs initial configuration on it and configures LDAP.
+- name: Installing &amp; configuring Nexus...
+  ansible.builtin.include_role:
+    name: clarified.core.nexus
+    vars:
+      configure: true
+      nexus_admin_password: # lookup to a predefined password that will be applied to the admin user on first run
+      configure_ldap: true
+      ldap_name: example.com
+      ldap_host: dc1.example.com
+      ldap_search_base: OU=ORG,DC=example,DC=com
+      bind_user_dn: CN=svc_nexus,OU=Service Accounts,OU=ORG,DC=example,DC=com
+      group_dn_under_under_searchbase: OU=Nexus,OU=Resources
+      bind_dn_password: # lookup to a predefined password for the svc_nexus user
+      nexus_ldap_administrators_group: Nexus Admins
 </code></pre>
-<h2 id="license">License</h2>
-<p>AGPL-3.0-or-later</p>
-<h2 id="author-information">Author Information</h2>
-<p>COMING SOON
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).</p>
 
 
 
