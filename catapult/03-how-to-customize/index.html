@@ -12,7 +12,7 @@
         <link rel="prev" href="../02-how-to-use/">
       
       
-        <link rel="next" href="../90-set-up-keepass/">
+        <link rel="next" href="../04-template-requirements/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>VM Template Requirements - Catapult Docs</title>
+        <title>How to customize - Catapult Docs</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vm-template-requirements" class="md-skip">
+        <a href="#how-to-customize" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VM Template Requirements
+              How to customize
             
           </span>
         </div>
@@ -334,7 +334,7 @@
           
   
   <span class="md-ellipsis">
-    VM Template Requirements
+    How to customize
   </span>
   
 
@@ -345,7 +345,7 @@
         
   
   <span class="md-ellipsis">
-    VM Template Requirements
+    How to customize
   </span>
   
 
@@ -367,23 +367,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#base-template-requirements" class="md-nav__link">
-    Base template requirements
+  <a href="#personalization" class="md-nav__link">
+    Personalization
   </a>
   
-    <nav class="md-nav" aria-label="Base template requirements">
+    <nav class="md-nav" aria-label="Personalization">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    Windows
+  <a href="#personal-docker-compose-file" class="md-nav__link">
+    Personal Docker Compose file
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
-    Linux
+  <a href="#personal-aliases-file" class="md-nav__link">
+    Personal aliases file
   </a>
   
 </li>
@@ -394,8 +394,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#per-environmentprojectdatacenter-etc-template-requirements" class="md-nav__link">
-    Per-environment/project/datacenter etc. template requirements
+  <a href="#customization" class="md-nav__link">
+    Customization
   </a>
   
 </li>
@@ -404,6 +404,26 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-template-requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VM Template Requirements
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1225,23 +1245,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#base-template-requirements" class="md-nav__link">
-    Base template requirements
+  <a href="#personalization" class="md-nav__link">
+    Personalization
   </a>
   
-    <nav class="md-nav" aria-label="Base template requirements">
+    <nav class="md-nav" aria-label="Personalization">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    Windows
+  <a href="#personal-docker-compose-file" class="md-nav__link">
+    Personal Docker Compose file
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
-    Linux
+  <a href="#personal-aliases-file" class="md-nav__link">
+    Personal aliases file
   </a>
   
 </li>
@@ -1252,8 +1272,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#per-environmentprojectdatacenter-etc-template-requirements" class="md-nav__link">
-    Per-environment/project/datacenter etc. template requirements
+  <a href="#customization" class="md-nav__link">
+    Customization
   </a>
   
 </li>
@@ -1273,36 +1293,31 @@
                   
 
 
-<h1 id="vm-template-requirements">VM Template Requirements</h1>
-<p>When using Catapult with a cloud provider you can just use the VM templates provided by the cloud provider. When using Catapult in your own private cloud you need to make sure that the VM templates your create are compatible with Catapult.</p>
-<p>One really good tool for template generation is <a href="https://www.packer.io/">Packer</a>. Packer can be used to create base images for all major cloud providers and also for local virtualization solutions like VirtualBox or VMWare. We recommend using Packer or manually creating base images for yourself and then using Catapult to create per-environment/project/datacenter etc. VM templates from those base images.</p>
-<h2 id="base-template-requirements">Base template requirements</h2>
-<h3 id="windows">Windows</h3>
+<h1 id="how-to-customize">How to customize</h1>
+<p>Catapult has 2 modes of customization:</p>
 <ul>
-<li>
-<p>Latest stable OpenSSH installed and running -- Catapult does all of its work over SSH. Don't use the built-in Windows SSH server it's versions are different per OS version and you will start getting random connection errors.</p>
-</li>
-<li>
-<p><code>MaxAuthTries</code> set to <code>20</code> in <code>C:/ProgramData/ssh/sshd_config</code> -- A lot of users will have more than 6 keys in their SSH agent and the default <code>MaxAuthTries</code> of 6 will cause Catapult to fail to connect to the VM. The value must not be 20 but it most likely must be higher than 6.</p>
-</li>
-<li>
-<p>(Optional) <a href="https://chocolatey.org/install">Chocolatey</a> installed -- It's not a hard requirement but it's really useful to have Chocolatey installed on your Windows VMs. Catapult can use Chocolatey to install the required software on the VMs. Chocolatey can also be used to install the OpenSSH server on the base template with <code>choco install openssh -params /SSHServerFeature -y</code></p>
-</li>
+<li>Personalization - Where users can set their own preferences that will only affect them.</li>
+<li>Customization - Where preferences are configured in a way that they apply to all users.</li>
 </ul>
-<h3 id="linux">Linux</h3>
+<h2 id="personalization">Personalization</h2>
+<p>There are 2 ways to personalize Catapult:</p>
+<h3 id="personal-docker-compose-file">Personal Docker Compose file</h3>
+<p><code>docker/docker-compose-personal.yml</code> - This file is used to add to, or override the default configuration values defined in <code>docker/docker-compose.yml</code>.</p>
+<p>Potential use cases for this file include:</p>
 <ul>
-<li>
-<p>SSH server installed and running -- Catapult does all of its work over SSH.</p>
-</li>
-<li>
-<p><code>MaxAuthTries</code> set to <code>20</code> in <code>/etc/ssh/sshd_config</code> -- Same as with Windows.</p>
-</li>
-<li>
-<p><code>PermitRootLogin</code> set to <code>yes</code> in <code>/etc/ssh/sshd_config</code> -- Catapult needs to be able to login as root to the VMs the first time. After that Catapult can be used to create new accounts and disable root login.</p>
-</li>
+<li>Mounting custom shell rc files (currently only .zshrc supported)</li>
+<li>Using environmental variables to override default Ansible values that come from <code>ansible.cfg</code></li>
+<li>Mounting custom files into the container</li>
 </ul>
-<h2 id="per-environmentprojectdatacenter-etc-template-requirements">Per-environment/project/datacenter etc. template requirements</h2>
-<p>We recommend applying the <a href="https://github.com/ClarifiedSecurity/clarified.core/tree/main/clarified/core/roles/template_os_configuration">template_os_configuration</a> the specific project templates. It contains some prerequisites for different <code>clarified.core</code> roles that you might otherwise need to install before using those roles.</p>
+<h3 id="personal-aliases-file">Personal aliases file</h3>
+<p><code>container/home/builder/.personal_aliases</code> - This file is used to add custom aliases that will only be available to the user.</p>
+<p>Potential use cases for this file include:</p>
+<ul>
+<li>Adding custom aliases that are not available in the default aliases file</li>
+<li>Adding aliases that are specific to the user</li>
+</ul>
+<h2 id="customization">Customization</h2>
+<p>To customize Catapult for all users, a separate git project needs to be created that contains all of the required files. Then users need to point to that project using the <code>MAKEVAR_CATAPULT_CUSTOMIZER_REPO</code> variable in their <code>.makerc-vars</code> file. For a full list of available options, see the example <a href="https://github.com/ClarifiedSecurity/catapult-customizer">Catapult Customizer</a> repo.</p>
 
 
 

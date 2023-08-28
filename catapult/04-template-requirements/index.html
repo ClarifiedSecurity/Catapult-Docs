@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../deploy_vars/">
+        <link rel="prev" href="../03-how-to-customize/">
       
       
-        <link rel="next" href="../finalize/">
+        <link rel="next" href="../90-set-up-keepass/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>docker - Catapult Docs</title>
+        <title>VM Template Requirements - Catapult Docs</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker" class="md-skip">
+        <a href="#vm-template-requirements" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              docker
+              VM Template Requirements
             
           </span>
         </div>
@@ -243,17 +243,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
@@ -266,7 +268,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Catapult
@@ -279,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../catapult/01-installation/" class="md-nav__link">
+      <a href="../01-installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -299,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../catapult/02-how-to-use/" class="md-nav__link">
+      <a href="../02-how-to-use/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -319,7 +321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../catapult/03-how-to-customize/" class="md-nav__link">
+      <a href="../03-how-to-customize/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -337,9 +339,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../catapult/04-template-requirements/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    VM Template Requirements
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -348,6 +370,60 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#base-template-requirements" class="md-nav__link">
+    Base template requirements
+  </a>
+  
+    <nav class="md-nav" aria-label="Base template requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-environmentprojectdatacenter-etc-template-requirements" class="md-nav__link">
+    Per-environment/project/datacenter etc. template requirements
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -359,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../catapult/90-set-up-keepass/" class="md-nav__link">
+      <a href="../90-set-up-keepass/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -379,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../catapult/91-generate-ssh-keypair/" class="md-nav__link">
+      <a href="../91-generate-ssh-keypair/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -399,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../catapult/92-contributing/" class="md-nav__link">
+      <a href="../92-contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -485,19 +561,17 @@
       
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
@@ -510,7 +584,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Clarified core collection
@@ -523,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../accounts/" class="md-nav__link">
+      <a href="../../clarified-core-collection/accounts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -543,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cleanup/" class="md-nav__link">
+      <a href="../../clarified-core-collection/cleanup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -563,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configure_networking/" class="md-nav__link">
+      <a href="../../clarified-core-collection/configure_networking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -583,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../connection/" class="md-nav__link">
+      <a href="../../clarified-core-collection/connection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -603,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../create/" class="md-nav__link">
+      <a href="../../clarified-core-collection/create/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -623,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization/" class="md-nav__link">
+      <a href="../../clarified-core-collection/customization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -643,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization_post_vm_role/" class="md-nav__link">
+      <a href="../../clarified-core-collection/customization_post_vm_role/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -663,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization_pre_role/" class="md-nav__link">
+      <a href="../../clarified-core-collection/customization_pre_role/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -683,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization_pre_vm_role/" class="md-nav__link">
+      <a href="../../clarified-core-collection/customization_pre_vm_role/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -703,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization_single_role/" class="md-nav__link">
+      <a href="../../clarified-core-collection/customization_single_role/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -723,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../deploy_vars/" class="md-nav__link">
+      <a href="../../clarified-core-collection/deploy_vars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -741,29 +815,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    docker
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../clarified-core-collection/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -772,54 +826,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    Role Variables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    Dependencies
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -831,7 +837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../finalize/" class="md-nav__link">
+      <a href="../../clarified-core-collection/finalize/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../generate_credentials/" class="md-nav__link">
+      <a href="../../clarified-core-collection/generate_credentials/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -871,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../get_ip/" class="md-nav__link">
+      <a href="../../clarified-core-collection/get_ip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -891,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../join_domain/" class="md-nav__link">
+      <a href="../../clarified-core-collection/join_domain/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -911,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linux_xrdp_keyboard/" class="md-nav__link">
+      <a href="../../clarified-core-collection/linux_xrdp_keyboard/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linux_xrdp_server/" class="md-nav__link">
+      <a href="../../clarified-core-collection/linux_xrdp_server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -951,7 +957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nexus/" class="md-nav__link">
+      <a href="../../clarified-core-collection/nexus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../os_configuration/" class="md-nav__link">
+      <a href="../../clarified-core-collection/os_configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -991,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../powerstate/" class="md-nav__link">
+      <a href="../../clarified-core-collection/powerstate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1011,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rename_vm/" class="md-nav__link">
+      <a href="../../clarified-core-collection/rename_vm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1031,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../save_secrets/" class="md-nav__link">
+      <a href="../../clarified-core-collection/save_secrets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1051,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../snapshots/" class="md-nav__link">
+      <a href="../../clarified-core-collection/snapshots/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1071,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../template_os_configuration/" class="md-nav__link">
+      <a href="../../clarified-core-collection/template_os_configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1091,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../trusted_certificates/" class="md-nav__link">
+      <a href="../../clarified-core-collection/trusted_certificates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../updates/" class="md-nav__link">
+      <a href="../../clarified-core-collection/updates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1131,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vcenter_vmtools_policy/" class="md-nav__link">
+      <a href="../../clarified-core-collection/vcenter_vmtools_policy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1151,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win_configure_rdp/" class="md-nav__link">
+      <a href="../../clarified-core-collection/win_configure_rdp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1171,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win_dc_post_reboot_check/" class="md-nav__link">
+      <a href="../../clarified-core-collection/win_dc_post_reboot_check/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1191,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win_sysprep/" class="md-nav__link">
+      <a href="../../clarified-core-collection/win_sysprep/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1239,29 +1245,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
+  <a href="#base-template-requirements" class="md-nav__link">
+    Base template requirements
   </a>
+  
+    <nav class="md-nav" aria-label="Base template requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    Role Variables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    Dependencies
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
+  <a href="#per-environmentprojectdatacenter-etc-template-requirements" class="md-nav__link">
+    Per-environment/project/datacenter etc. template requirements
   </a>
   
 </li>
@@ -1281,19 +1293,36 @@
                   
 
 
-<h1 id="docker">docker</h1>
-<p>This role installs Docker and Docker Compose on the target machine. By default it also configures IPv6 support for Docker and a default network with IPv6 support.</p>
-<h2 id="requirements">Requirements</h2>
-<p>none</p>
-<h2 id="role-variables">Role Variables</h2>
-<p>Refer to the <a href="https://github.com/ClarifiedSecurity/clarified.core/blob/main/clarified/core/roles/docker/defaults/main.yml">defaults/main.yml</a> file for a list of variables and their default values.</p>
-<h2 id="dependencies">Dependencies</h2>
-<p>none</p>
-<h2 id="example">Example</h2>
-<pre><code class="language-yaml">- name: Including connection role
-  include_role:
-    name: clarified.core.docker
-</code></pre>
+<h1 id="vm-template-requirements">VM Template Requirements</h1>
+<p>When using Catapult with a cloud provider you can just use the VM templates provided by the cloud provider. When using Catapult in your own private cloud you need to make sure that the VM templates your create are compatible with Catapult.</p>
+<p>One really good tool for template generation is <a href="https://www.packer.io/">Packer</a>. Packer can be used to create base images for all major cloud providers and also for local virtualization solutions like VirtualBox or VMWare. We recommend using Packer or manually creating base images for yourself and then using Catapult to create per-environment/project/datacenter etc. VM templates from those base images.</p>
+<h2 id="base-template-requirements">Base template requirements</h2>
+<h3 id="windows">Windows</h3>
+<ul>
+<li>
+<p>Latest stable OpenSSH installed and running -- Catapult does all of its work over SSH. Don't use the built-in Windows SSH server it's versions are different per OS version and you will start getting random connection errors.</p>
+</li>
+<li>
+<p><code>MaxAuthTries</code> set to <code>20</code> in <code>C:/ProgramData/ssh/sshd_config</code> -- A lot of users will have more than 6 keys in their SSH agent and the default <code>MaxAuthTries</code> of 6 will cause Catapult to fail to connect to the VM. The value must not be 20 but it most likely must be higher than 6.</p>
+</li>
+<li>
+<p>(Optional) <a href="https://chocolatey.org/install">Chocolatey</a> installed -- It's not a hard requirement but it's really useful to have Chocolatey installed on your Windows VMs. Catapult can use Chocolatey to install the required software on the VMs. Chocolatey can also be used to install the OpenSSH server on the base template with <code>choco install openssh -params /SSHServerFeature -y</code></p>
+</li>
+</ul>
+<h3 id="linux">Linux</h3>
+<ul>
+<li>
+<p>SSH server installed and running -- Catapult does all of its work over SSH.</p>
+</li>
+<li>
+<p><code>MaxAuthTries</code> set to <code>20</code> in <code>/etc/ssh/sshd_config</code> -- Same as with Windows.</p>
+</li>
+<li>
+<p><code>PermitRootLogin</code> set to <code>yes</code> in <code>/etc/ssh/sshd_config</code> -- Catapult needs to be able to login as root to the VMs the first time. After that Catapult can be used to create new accounts and disable root login.</p>
+</li>
+</ul>
+<h2 id="per-environmentprojectdatacenter-etc-template-requirements">Per-environment/project/datacenter etc. template requirements</h2>
+<p>We recommend applying the <a href="https://github.com/ClarifiedSecurity/clarified.core/tree/main/clarified/core/roles/template_os_configuration">template_os_configuration</a> the specific project templates. It contains some prerequisites for different <code>clarified.core</code> roles that you might otherwise need to install before using those roles.</p>
 
 
 
