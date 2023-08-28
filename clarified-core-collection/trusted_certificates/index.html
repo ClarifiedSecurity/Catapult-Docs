@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../customization_single_role/">
+        <link rel="prev" href="../template_os_configuration/">
       
       
-        <link rel="next" href="../docker/">
+        <link rel="next" href="../updates/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Role Name - Catapult Docs</title>
+        <title>trusted_certificates - Catapult Docs</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#role-name" class="md-skip">
+        <a href="#trusted_certificates" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Role Name
+              trusted_certificates
             
           </span>
         </div>
@@ -701,29 +701,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Role Name
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../deploy_vars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,68 +712,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    Role Variables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    Dependencies
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-playbook" class="md-nav__link">
-    Example Playbook
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    License
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#author-information" class="md-nav__link">
-    Author Information
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1083,9 +1001,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../trusted_certificates/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    trusted_certificates
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1094,6 +1032,54 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-variables" class="md-nav__link">
+    Role Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1254,22 +1240,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-playbook" class="md-nav__link">
-    Example Playbook
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    License
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#author-information" class="md-nav__link">
-    Author Information
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
@@ -1289,30 +1261,27 @@
                   
 
 
-<h1 id="role-name">Role Name</h1>
-<p>COMING SOON
-A brief description of the role goes here.</p>
+<h1 id="trusted_certificates">trusted_certificates</h1>
+<p>This role installs trusted certificates on the target Windows, Linux or VyOS system. Trusted certificates are used to verify the identity of a remote system. This role is used to install certificates that are not part of the default trusted certificate store. The source of the certificates can be a file for url.</p>
 <h2 id="requirements">Requirements</h2>
-<p>COMING SOON
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.</p>
+<p>The certificates must be in PEM (base64 encoded) format. The role will convert the certificates to the correct format for the target system.</p>
 <h2 id="role-variables">Role Variables</h2>
-<p>COMING SOON
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.</p>
+<p>Refer to <a href="https://github.com/ClarifiedSecurity/clarified.core/blob/main/clarified/core/roles/trusted_certificates/defaults/main.yml">defaults/main.yml</a> for the full list of variables.</p>
 <h2 id="dependencies">Dependencies</h2>
-<p>COMING SOON
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.</p>
-<h2 id="example-playbook">Example Playbook</h2>
-<p>COMING SOON
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:</p>
-<pre><code>- hosts: servers
-  roles:
-     - { role: username.rolename, x: 42 }
+<p>none</p>
+<h2 id="example">Example</h2>
+<pre><code class="language-yaml"># This example will install the RootCA certificate from the url http://example.com/pem and the SecondRootCA certificate from the local file SecondRootCA.cer. The certificates will also be added to the Java truststore.
+- name: Including trusted_certificates role...
+  ansible.builtin.include_role:
+    name: clarified.core.trusted_certificates
+  vars:
+    jks_truststore_name: true
+    trusted_certificates_list:
+      - name: RootCA
+        src: http://example.com/pem
+      - name: SecondRootCA
+        src: SecondRootCA.cer
 </code></pre>
-<h2 id="license">License</h2>
-<p>AGPL-3.0-or-later</p>
-<h2 id="author-information">Author Information</h2>
-<p>COMING SOON
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).</p>
 
 
 
