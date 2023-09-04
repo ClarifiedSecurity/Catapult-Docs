@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../configure_networking/">
+        <link rel="prev" href="../updates/">
       
       
-        <link rel="next" href="../create/">
+        <link rel="next" href="../vcenter_vmtools_policy/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>connection - Catapult Docs</title>
+        <title>vault - Catapult Docs</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#connection" class="md-skip">
+        <a href="#vault" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              connection
+              vault
             
           </span>
         </div>
@@ -581,29 +581,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    connection
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../connection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -612,54 +592,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    Role Variables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    Dependencies
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1129,9 +1061,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../vault/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    vault
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1140,6 +1092,54 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-variables" class="md-nav__link">
+    Role Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1301,23 +1301,60 @@
                   
 
 
-<h1 id="connection">connection</h1>
-<p>This role is used to set connection parameters for the VM after cloning. It parses the correct parameters based on if the VM was just cloned or if it is already been customized. This role can also be used to connect to an already exiting virtual or physical machine. All of the connections are made over SSH.</p>
+<h1 id="vault">vault</h1>
+<p>This is a role for installing and configuring <a href="https://www.hashicorp.com/products/vault">Hashicorp Vault</a>. This role can be used to:</p>
+<ul>
+<li>Run initial setup of Vault</li>
+<li>Configure Vault to integrate with LDAP</li>
+<li>Enable and configure the PKI secrets engine</li>
+</ul>
+<p>During initial setup of Vault, the root token and unseal key(s) are saved to <code>/srv/vault/creds</code> folder. Make sure to move these to a safe location after initial setup and use Ansible lookup plugins to retrieve them when needed.</p>
 <h2 id="requirements">Requirements</h2>
-<p>Credentials for the VM to connect to. This can be either a username and password or a username and SSH key. The VM must also be configured to allow SSH connections.</p>
+<ul>
+<li>Requires an external reverse proxy (nginx, traefik, haproxy, caddy etc.) to handle GUI access and TLS termination.</li>
+</ul>
 <h2 id="role-variables">Role Variables</h2>
-<p><code>template_username</code> - The username to connect the freshly cloned machine to run post-configuration there. Usually root or Administrator.
-<code>template_password</code> - The password to connect the freshly cloned machine to run post-configuration there. Usually root or Administrator.
-<code>connection_address</code> - The IP address of the machine to connect to.</p>
-<p><code>ansible_deployer_username</code> - The username to connect to the machine with once the post-configuration is complete. Usually something that gets created in the <code>clarified.core.accounts</code> role.
-<code>ansible_deployer_password</code> - The password to connect to the machine with once the post-configuration is complete. Usually something that gets created in the <code>clarified.core.accounts</code> role.</p>
+<p>Refer to <a href="https://github.com/ClarifiedSecurity/clarified.core/blob/main/clarified/core/roles/vault/defaults/main.yml">defaults/main.yml</a> for the full list of variables, their default values and descriptions.</p>
 <h2 id="dependencies">Dependencies</h2>
-<p>none</p>
+<ul>
+<li>Depends on Docker and Docker Compose being installed on the host. Docker can be installed using the <a href="https://github.com/ClarifiedSecurity/clarified.core/tree/main/clarified/core/roles/docker">clarified.core.docker</a> role.</li>
+</ul>
 <h2 id="example">Example</h2>
-<p>Since this role already gets included in <code>start.yml</code> there is no need to include it in your playbook. However, if you want to run it separately, you can do so with:</p>
-<pre><code class="language-yaml">- name: Including connection role
-  include_role:
-    name: clarified.core.connection
+<pre><code class="language-yaml"># Installing vault with default values and configuring everything manually
+- name: Installing Vault...
+  ansible.builtin.include_role:
+    name: clarified.core.vault
+</code></pre>
+<pre><code class="language-yaml"># Installing vault and running initial configuration
+- name: Installing &amp; configuring Vault...
+  ansible.builtin.include_role:
+    name: clarified.core.vault
+    vars:
+      vault_configure: true
+</code></pre>
+<pre><code class="language-yaml"># Installing vault and running initial configuration and configuring LDAP
+- name: Installing &amp; configuring Vault with LDAP...
+  ansible.builtin.include_role:
+    name: clarified.core.vault
+    vars:
+      vault_configure: true
+      vault_configure_ldap: true
+      vault_configuration_uri: https://vault.example.com
+      vault_binddn: CN=svc_nexus,OU=Service Accounts,OU=ORG,DC=example,DC=com
+      vault_bindpass: # lookup to a predefined password for the svc_nexus user
+      vault_groupdn: OU=Vault,OU=Groups,OU=ORG,DC=example,DC=com
+      vault_upndomain: example.com
+      vault_ldaps_url: ldaps://dc1.example.com # Can be LDAP or LDAPS
+      vault_userdn: OU=Users,OU=ORG,DC=example,DC=com
+      vault_ldaps_certificate_source: /usr/local/share/ca-certificates/LDAPRootCA.crt # Path or URL to the LDAP server's root CA certificate
+</code></pre>
+<pre><code class="language-yaml"># Installing vault and running initial configuration and configuring PKI with default values
+- name: Installing &amp; configuring Vault with PKI...
+  ansible.builtin.include_role:
+    name: clarified.core.vault
+    vars:
+      vault_create_root_ca: true # Create a self-signed root CA
+      vault_create_intermediate_ca: true # Create an intermediate CA (signed by the root CA)
 </code></pre>
 
 
