@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../linux_xrdp_server/">
+        <link rel="prev" href="../save_secrets/">
       
       
-        <link rel="next" href="../os_configuration/">
+        <link rel="next" href="../snapshots/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>nexus - Catapult Docs</title>
+        <title>save_secrets - Catapult Docs</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nexus" class="md-skip">
+        <a href="#save_secrets" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              nexus
+              save_secrets
             
           </span>
         </div>
@@ -881,29 +881,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    nexus
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../nexus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -912,81 +892,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    Role Variables
-  </a>
-  
-    <nav class="md-nav" aria-label="Role Variables">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#required-variables-for-installation" class="md-nav__link">
-    Required Variables for Installation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#required-variables-for-configuration" class="md-nav__link">
-    Required Variables for Configuration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#required-variables-for-ldap-configuration" class="md-nav__link">
-    Required Variables for LDAP Configuration
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    Dependencies
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1076,9 +981,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../secrets_to_vault/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    save_secrets
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1087,6 +1012,67 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-variables" class="md-nav__link">
+    Role Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Role Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-variables" class="md-nav__link">
+    Required Variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-variables-for-accounts-passwords" class="md-nav__link">
+    Required Variables for Accounts Passwords
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1321,35 +1307,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#required-variables-for-installation" class="md-nav__link">
-    Required Variables for Installation
+  <a href="#required-variables" class="md-nav__link">
+    Required Variables
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#required-variables-for-configuration" class="md-nav__link">
-    Required Variables for Configuration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#required-variables-for-ldap-configuration" class="md-nav__link">
-    Required Variables for LDAP Configuration
+  <a href="#required-variables-for-accounts-passwords" class="md-nav__link">
+    Required Variables for Accounts Passwords
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    Dependencies
-  </a>
   
 </li>
       
@@ -1375,73 +1347,45 @@
                   
 
 
-<h1 id="nexus">nexus</h1>
-<p>This is a role for installing and configuring <a href="https://help.sonatype.com/repomanager3">Nexus Repository Manager 3</a> on a in Docker on a Ubuntu/Debian host. This role can be used for following:</p>
+<h1 id="save_secrets">save_secrets</h1>
+<p>This is a role for saving secrets to <a href="https://www.hashicorp.com/products/vault">Hashicorp Vault</a>. It is has three modes of operation:</p>
 <ul>
-<li>Install Nexus with Docker Compose</li>
-<li>Run initial configuration of Nexus (optional)</li>
-<li>Install LDAP configuration for Nexus (optional)</li>
+<li>User accounts passwords - Will generate (if needed) and save the password for items in <code>user_accounts</code>, <code>domain_user_accounts</code> &amp; <code>admin_accounts</code> lists to Vault.</li>
+<li>Pregenerated secrets - Secrets are generated by the role and passed in as list for the role and the roles saves them to Vault if they do not already exist.</li>
+<li>Autogenerated secrets - Secrets cannot be generated by the user but are generated automatically by some application and only shown once (API keys, tokens etc). In that case this role will save the secret to Vault overwriting any existing secret with the same name.</li>
 </ul>
+<p>Refer to <a href="https://github.com/ClarifiedSecurity/clarified.core/tree/main/clarified/core/roles/accounts">clarified.core.accounts</a> role for more information about the <code>user_accounts</code>, <code>domain_user_accounts</code> &amp; <code>admin_accounts</code> lists.</p>
 <h2 id="requirements">Requirements</h2>
-<ul>
-<li>Tested on Ubuntu 22.04 but should work on any Debian based system.</li>
-<li>Requires an external reverse proxy (nginx, traefik, haproxy, caddy etc.) in front of Nexus to handle GUI access and TLS termination.</li>
-</ul>
+<p>Vault server with LDAP authentication enabled needs to be running and accessible. It can be installed using the <a href="https://github.com/ClarifiedSecurity/clarified.core/tree/main/clarified/core/roles/vault">clarified.core.vault</a> role.</p>
 <h2 id="role-variables">Role Variables</h2>
-<p>Refer to <a href="https://github.com/ClarifiedSecurity/clarified.core/blob/main/clarified/core/roles/nexus/defaults/main.yml">defaults/main.yml</a> for the full list of variables, their default values and descriptions.</p>
-<h3 id="required-variables-for-installation">Required Variables for Installation</h3>
+<p>Refer to <a href="https://github.com/ClarifiedSecurity/clarified.core/blob/main/clarified/core/roles/save_secrets/defaults/main.yml">defaults/main.yml</a> for the full list of variables, their default values and descriptions.</p>
+<h3 id="required-variables">Required Variables</h3>
 <ul>
-<li><code>docker_network</code></li>
+<li><code>secrets_vault_address</code> - Address of the Vault server ex. <code>https://vault.example.com</code></li>
+<li><code>secrets_vault_engine_path</code> - Path to the secrets engine in Vault ex. <code>kv</code></li>
+<li><code>secrets_vault_secrets_path</code> - Path to the under secrets under the secrets engine in Vault ex. <code>secrets</code></li>
 </ul>
-<h3 id="required-variables-for-configuration">Required Variables for Configuration</h3>
+<h3 id="required-variables-for-accounts-passwords">Required Variables for Accounts Passwords</h3>
 <ul>
-<li><code>fqdn</code></li>
-<li><code>nexus_admin_password</code></li>
-</ul>
-<h3 id="required-variables-for-ldap-configuration">Required Variables for LDAP Configuration</h3>
-<ul>
-<li><code>nexus_ldap_name</code></li>
-<li><code>nexus_ldap_host</code></li>
-<li><code>nexus_ldap_search_base</code></li>
-<li><code>nexus_bind_user_dn</code></li>
-<li><code>nexus_bind_user_password</code></li>
-<li><code>nexus_group_dn_under_under_searchbase</code></li>
-<li><code>nexus_nexus_ldap_administrators_group</code></li>
-</ul>
-<p>Alternatively the whole <code>nexus_ldap_configuration</code> block can be defined as a single variable to configure LDAP. See <a href="https://github.com/ClarifiedSecurity/clarified.core/blob/main/clarified/core/roles/nexus/defaults/main.yml">defaults/main.yml</a> for the full list of variables.</p>
-<h2 id="dependencies">Dependencies</h2>
-<ul>
-<li>Depends on Docker and Docker Compose being installed on the host. Docker can be installed using the <a href="https://github.com/ClarifiedSecurity/clarified.core/tree/main/clarified/core/roles/docker">clarified.core.docker</a> role.</li>
+<li><code>save_secrets_to_vault: true</code> - Enable on a host or group_var to make sure that this role get's included in <code>start.yml</code> and items in <code>user_accounts</code>, <code>domain_user_accounts</code> &amp; <code>admin_accounts</code> lists are saved to Vault.</li>
 </ul>
 <h2 id="example">Example</h2>
-<pre><code class="language-yaml"># Installs Nexus without configuring it. Initial configuration can be done manually from the web GUI.
-- name: Installing Nexus...
-  ansible.builtin.include_role:
-    name: clarified.core.nexus
-
-# Installs Nexus and runs initial configuration on it.
-- name: Installing &amp; configuring Nexus...
-  ansible.builtin.include_role:
-    name: clarified.core.nexus
-    vars:
-      configure: true
-      nexus_admin_password: # lookup to a predefined password that will be applied to the admin user on first run
-
-# Installs Nexus and runs initial configuration on it and configures LDAP.
-- name: Installing &amp; configuring Nexus...
-  ansible.builtin.include_role:
-    name: clarified.core.nexus
-    vars:
-      configure: true
-      nexus_admin_password: # lookup to a predefined password that will be applied to the admin user on first run
-      configure_ldap: true
-      ldap_name: example.com
-      ldap_host: dc1.example.com
-      ldap_search_base: OU=ORG,DC=example,DC=com
-      bind_user_dn: CN=svc_nexus,OU=Service Accounts,OU=ORG,DC=example,DC=com
-      group_dn_under_under_searchbase: OU=Nexus,OU=Resources
-      bind_dn_password: # lookup to a predefined password for the svc_nexus user
-      nexus_ldap_administrators_group: Nexus Admins
+<pre><code class="language-yaml">- name: Generating secres and saving them to Vault...
+  ansible.buildin.include_role:
+    name: clarified.core.secrets_to_vault
+  vars:
+    secrets_vault_address: https://vault.example.com
+    secrets_vault_engine_path: kv
+    secrets_vault_secrets_path: secrets
+    secrets:
+      # Predefined secret to save to vault under kv/data/secrets
+      - key: secret1
+        value: password1
+      # Predefined secret with a random generated value to save to vault under kv/data/secrets
+      - key: secret2
+        value: &quot;{{ lookup('password', '/dev/null length=32 chars=hexdigits') }}&quot;
+      # Predefined secret with a random generated value by the the role kv/data/secrets
+      - key: secret3
 </code></pre>
 
 
