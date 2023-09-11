@@ -1873,7 +1873,7 @@
 <pre><code class="language-zsh">ctp-deploy-network &lt;inventory_hostname&gt;
 </code></pre>
 <h3 id="ctp-deploy-fresh">ctp-deploy-fresh</h3>
-<p>Runs deploy as it if the machine does not exist</p>
+<p>Runs deploy as if the machine does not exist. This can be useful when deploy has failed before configuring accounts. Use this command to deploy the machine again as if it didn't exist and thus use the default values for the accounts.</p>
 <p><em>Example usage:</em></p>
 <ul>
 <li>Deploys the VM with the given inventory_hostname as if it didn't exist</li>
