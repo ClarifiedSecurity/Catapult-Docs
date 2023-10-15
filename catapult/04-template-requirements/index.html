@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -1341,8 +1341,9 @@
 
 <h1 id="vm-template-requirements">VM Template Requirements</h1>
 <p>When using Catapult with a cloud provider you can just use the VM templates provided by the cloud provider. When using Catapult in your own private cloud you need to make sure that the VM templates your create are compatible with Catapult.</p>
-<p>One really good tool for template generation is <a href="https://www.packer.io/">Packer</a>. Packer can be used to create base images for all major cloud providers and also for local virtualization solutions like VirtualBox or VMWare. We recommend using Packer or manually creating base images for yourself and then using Catapult to create per-environment/project/datacenter etc. VM templates from those base images.</p>
+<p>One great tool for template generation is <a href="https://www.packer.io/">Packer</a>. Packer can be used to create base images for all major cloud providers and also for local virtualization solutions like VirtualBox or VMWare. We recommend using Packer for creating base images for yourself and then using Catapult to create per-environment/project/datacenter etc. templates based on the base images. Alternatively you can just install the base templates manually.</p>
 <h2 id="base-template-requirements">Base template requirements</h2>
+<p>However you install your base templates make sure that they meet the following requirements. These configurations need to be present for initial configuration to the VMs to work. After the initial configuration is done you can change these configurations to whatever you want.</p>
 <h3 id="windows">Windows</h3>
 <ul>
 <li>
@@ -1366,9 +1367,15 @@
 <li>
 <p><code>PermitRootLogin</code> set to <code>yes</code> in <code>/etc/ssh/sshd_config</code> -- Catapult needs to be able to login as root to the VMs the first time. After that Catapult can be used to create new accounts and disable root login.</p>
 </li>
+<li>
+<p><code>PasswordAuthentication</code> set to <code>yes</code> in <code>/etc/ssh/sshd_config</code> -- It is usually set to yes for most Linux distributions but it's good to check.</p>
+</li>
+<li>
+<p><code>sudo</code> package needs to be installed for your distribution.</p>
+</li>
 </ul>
 <h2 id="per-environmentprojectdatacenter-etc-template-requirements">Per-environment/project/datacenter etc. template requirements</h2>
-<p>We recommend applying the <a href="https://github.com/ClarifiedSecurity/clarified.core/tree/main/clarified/core/roles/template_os_configuration">template_os_configuration</a> the specific project templates. It contains some prerequisites for different <code>clarified.core</code> roles that you might otherwise need to install before using those roles.</p>
+<p>We recommend applying the <a href="https://github.com/ClarifiedSecurity/nova.core/tree/main/nova/core/roles/template_os_configuration">template_os_configuration</a> to the specific project templates. It contains some prerequisites for different <code>nova.core</code> roles that you might otherwise need to install before using those roles.</p>
 
 
 
