@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -1041,7 +1041,7 @@
         
   
   <span class="md-ellipsis">
-    Outline and supporting services installed on a single host
+    outline
   </span>
   
 
@@ -1445,6 +1445,16 @@
         package_mirror_chocolatey_username: admin
         package_mirror_chocolatey_password: password
 </code></pre>
+<pre><code class="language-yaml">- name: Configuring package mirrors for Ubuntu...
+  ansible.builtin.include_role:
+    name: nova.core.configure_package_mirrors
+  vars:
+    package_mirror_ubuntu_uri: 
+      general: &quot;https://nexus.example.com/repository/{{ ansible_facts.lsb.codename }}/&quot;
+      updates: &quot;https://nexus.example.com/repository/{{ ansible_facts.lsb.codename }}-updates/&quot;
+      security: &quot;https://nexus.example.com/repository/{{ ansible_facts.lsb.codename }}-security/&quot;
+      backports: &quot;https://nexus.example.com/repository/{{ ansible_facts.lsb.codename }}-backports/&quot;
+</code></pre>
 
 
 
@@ -1486,7 +1496,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
     
   </body>
