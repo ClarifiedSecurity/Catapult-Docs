@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../linux_xrdp_keyboard/">
+        <link rel="prev" href="../accounts/">
       
       
-        <link rel="next" href="../machine_operations/">
+        <link rel="next" href="../cleanup/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>linux_xrdp_server - Catapult Docs</title>
+        <title>caddy - Catapult Docs</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linux_xrdp_server" class="md-skip">
+        <a href="#caddy" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              linux_xrdp_server
+              caddy
             
           </span>
         </div>
@@ -560,10 +560,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../caddy/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    caddy
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -572,6 +592,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -938,30 +1014,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    linux_xrdp_server
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../linux_xrdp_server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -970,62 +1026,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Role Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1472,18 +1472,51 @@
                   
 
 
-<h1 id="linux_xrdp_server">linux_xrdp_server</h1>
-<p>This roles installs and configures xrdp on a Linux machine.</p>
+<h1 id="caddy">caddy</h1>
+<p>This is a role for installing and configuering <a href="https://caddyserver.com/docs/">Caddy</a> web server.</p>
 <h2 id="requirements">Requirements</h2>
 <p>none</p>
 <h2 id="role-variables">Role Variables</h2>
-<p>All required role variables are coming from gather_facts.</p>
 <h2 id="dependencies">Dependencies</h2>
-<p>none</p>
+<ul>
+<li>Depends on Docker and Docker Compose being installed on the host. Docker can be installed using the <a href="https://github.com/novateams/nova.core/tree/main/nova/core/roles/caddy">nova.core.docker</a> role.</li>
+</ul>
 <h2 id="example">Example</h2>
-<pre><code class="language-yaml">- name: Inlcude role linux_xrdp_server
+<pre><code class="language-yaml"># Installing Caddy server that listens on all addresses and reverse proxies to an internal server
+- name: Installing Caddy...
   ansible.builtin.include_role:
-    name: nova.core.linux_xrdp_server
+    name: nova.core.caddy
+  vars:
+    caddy_servers:
+    - caddy_server_name: web.example.com # Name of the server
+        caddy_server_listen_addresses:
+        - &quot;:&quot;
+        caddy_server_reverse_proxy_to_address: http://internal.example.com
+</code></pre>
+<pre><code class="language-yaml"># Installing Caddy server that listens only on port 80 with TLS disabled and reverse proxies to an internal server
+- name: Installing Caddy...
+  ansible.builtin.include_role:
+    name: nova.core.caddy
+  vars:
+    caddy_servers:
+      - caddy_server_name: web.example.com # Name of the server
+        caddy_server_listen_addresses:
+          - &quot;:80&quot;
+        caddy_server_reverse_proxy_to_address: http://internal.example.com
+        caddy_use_tls: false
+</code></pre>
+<pre><code class="language-yaml"># Installing Caddy server that listens only on all ports with TLS enabled and reverse proxies to an internal server
+# Only responds to requests for www.example.com and www2.example.com
+- name: Installing Caddy...
+  ansible.builtin.include_role:
+    name: nova.core.caddy
+  vars:
+    caddy_servers:
+      - caddy_server_name: www.example.com # Name of the server
+        caddy_server_listen_addresses:
+          - www.example.com
+          - www2.example.com
+        caddy_server_reverse_proxy_to_address: http://internal.example.com
 </code></pre>
 
 

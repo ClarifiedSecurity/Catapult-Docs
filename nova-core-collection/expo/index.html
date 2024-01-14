@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../linux_xrdp_keyboard/">
+        <link rel="prev" href="../docker/">
       
       
-        <link rel="next" href="../machine_operations/">
+        <link rel="next" href="../finalize/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>linux_xrdp_server - Catapult Docs</title>
+        <title>expo - Catapult Docs</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linux_xrdp_server" class="md-skip">
+        <a href="#expo" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              linux_xrdp_server
+              expo
             
           </span>
         </div>
@@ -812,10 +812,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../expo/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    expo
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -824,6 +844,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -938,30 +1014,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    linux_xrdp_server
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../linux_xrdp_server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -970,62 +1026,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Role Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1472,18 +1472,20 @@
                   
 
 
-<h1 id="linux_xrdp_server">linux_xrdp_server</h1>
-<p>This roles installs and configures xrdp on a Linux machine.</p>
+<h1 id="expo">expo</h1>
+<p>This role is used to deploy Exercise Portal (EXPO) to a VM.</p>
 <h2 id="requirements">Requirements</h2>
-<p>none</p>
+<p>Certificates, which are defined in the defaults.</p>
 <h2 id="role-variables">Role Variables</h2>
-<p>All required role variables are coming from gather_facts.</p>
+<p>See <a href="https://github.com/novateams/nova.core/blob/main/nova/core/roles/expo/defaults/main.yml">defaults/main.yml</a> for the full list of variables.</p>
 <h2 id="dependencies">Dependencies</h2>
-<p>none</p>
+<ul>
+<li>Depends on Docker and Docker Compose being installed on the host. Docker can be installed using the <a href="https://github.com/novateams/nova.core/tree/main/nova/core/roles/docker">nova.core.docker</a> role.</li>
+</ul>
 <h2 id="example">Example</h2>
-<pre><code class="language-yaml">- name: Inlcude role linux_xrdp_server
-  ansible.builtin.include_role:
-    name: nova.core.linux_xrdp_server
+<pre><code class="language-yaml">- name: Including connection role
+  include_role:
+    name: nova.core.expo
 </code></pre>
 
 
