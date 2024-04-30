@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.19">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20">
     
     
       
@@ -375,6 +375,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#enter-the-catapult" class="md-nav__link">
     <span class="md-ellipsis">
       Enter the Catapult
@@ -399,49 +408,109 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deploy commands
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Deploy commands">
+    <nav class="md-nav" aria-label="General commands">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ctp-deploy" class="md-nav__link">
+  <a href="#ctp-secrets-edit" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-deploy
+      ctp secrets edit
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-redeploy" class="md-nav__link">
+  <a href="#ctp-secrets-change-password" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-redeploy
+      ctp secrets change-password
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-deploy-until-configuration" class="md-nav__link">
+  <a href="#ctp-project-select" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-deploy-until-configuration
+      ctp project select
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Host commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Host commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host list
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-redeploy-until-configuration" class="md-nav__link">
+  <a href="#ctp-host-vars" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-redeploy-until-configuration
+      ctp host vars
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host ip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host deploy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-redeploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host redeploy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-deploy-until-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host deploy-until-configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-redeploy-until-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host redeploy-until-configuration
     </span>
   </a>
   
@@ -457,45 +526,54 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-deploy-role" class="md-nav__link">
+  <a href="#ctp-host-deploy-role" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-deploy-role
+      ctp host deploy-role
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-deploy-network" class="md-nav__link">
+  <a href="#ctp-host-deploy-network" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-deploy-network
+      ctp host deploy-network
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-deploy-fresh" class="md-nav__link">
+  <a href="#ctp-host-deploy-fresh" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-deploy-fresh
+      ctp host deploy-fresh
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-remove" class="md-nav__link">
+  <a href="#ctp-host-remove" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-remove
+      ctp host remove
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-rebuild-linode-vm" class="md-nav__link">
+  <a href="#ctp-host-rebuild-linode-vm" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-rebuild-linode-vm
+      ctp host rebuild-linode-vm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host update
     </span>
   </a>
   
@@ -516,193 +594,136 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#snapshot-modes" class="md-nav__link">
+  <a href="#vm-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Snapshot modes
+      VM commands
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Snapshot modes">
+    <nav class="md-nav" aria-label="VM commands">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ctp-snapshot" class="md-nav__link">
+  <a href="#ctp-vm-rename" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-snapshot
+      ctp vm rename
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-clean-snapshot" class="md-nav__link">
+  <a href="#ctp-vm-snapshot" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-clean-snapshot
+      ctp vm snapshot
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-live-snapshot" class="md-nav__link">
+  <a href="#ctp-vm-snapshot-create-clean" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-live-snapshot
+      ctp vm snapshot-create-clean
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-revert" class="md-nav__link">
+  <a href="#ctp-vm-snapshot-live" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-revert
+      ctp vm snapshot-live
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-remove-snapshot" class="md-nav__link">
+  <a href="#ctp-vm-snapshot-revert" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-remove-snapshot
+      ctp vm snapshot-revert
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-remove-all-snapshot" class="md-nav__link">
+  <a href="#ctp-vm-snapshot-remove" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-remove-all-snapshot
+      ctp vm snapshot-remove
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-rename-snapshot" class="md-nav__link">
+  <a href="#ctp-vm-snapshot-remove-all" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-rename-snapshot
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#power-state" class="md-nav__link">
-    <span class="md-ellipsis">
-      Power state
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Power state">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ctp-poweron" class="md-nav__link">
-    <span class="md-ellipsis">
-      ctp-poweron
+      ctp vm snapshot-remove-all
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-restart" class="md-nav__link">
+  <a href="#ctp-vm-snapshot-rename" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-restart
+      ctp vm snapshot-rename
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-shutdown" class="md-nav__link">
+  <a href="#ctp-vm-poweron" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-shutdown
+      ctp vm poweron
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-poweroff" class="md-nav__link">
+  <a href="#ctp-vm-restart" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-poweroff
+      ctp vm restart
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-reset" class="md-nav__link">
+  <a href="#ctp-vm-shutdown" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-reset
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#misc-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      MISC commands
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="MISC commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ctp-update-os" class="md-nav__link">
-    <span class="md-ellipsis">
-      ctp-update-os
+      ctp vm shutdown
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-list" class="md-nav__link">
+  <a href="#ctp-vm-poweroff" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-list
+      ctp vm poweroff
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-list-vars" class="md-nav__link">
+  <a href="#ctp-vm-reset" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-list-vars
+      ctp vm reset
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-rename-vm" class="md-nav__link">
+  <a href="#ctp-vm-suspend" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-rename-vm
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ctp-get-ip" class="md-nav__link">
-    <span class="md-ellipsis">
-      ctp-get-ip
+      ctp vm suspend
     </span>
   </a>
   
@@ -1764,6 +1785,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#enter-the-catapult" class="md-nav__link">
     <span class="md-ellipsis">
       Enter the Catapult
@@ -1788,49 +1818,109 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deploy commands
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Deploy commands">
+    <nav class="md-nav" aria-label="General commands">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ctp-deploy" class="md-nav__link">
+  <a href="#ctp-secrets-edit" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-deploy
+      ctp secrets edit
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-redeploy" class="md-nav__link">
+  <a href="#ctp-secrets-change-password" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-redeploy
+      ctp secrets change-password
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-deploy-until-configuration" class="md-nav__link">
+  <a href="#ctp-project-select" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-deploy-until-configuration
+      ctp project select
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Host commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Host commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host list
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-redeploy-until-configuration" class="md-nav__link">
+  <a href="#ctp-host-vars" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-redeploy-until-configuration
+      ctp host vars
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host ip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host deploy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-redeploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host redeploy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-deploy-until-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host deploy-until-configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-redeploy-until-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host redeploy-until-configuration
     </span>
   </a>
   
@@ -1846,45 +1936,54 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-deploy-role" class="md-nav__link">
+  <a href="#ctp-host-deploy-role" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-deploy-role
+      ctp host deploy-role
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-deploy-network" class="md-nav__link">
+  <a href="#ctp-host-deploy-network" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-deploy-network
+      ctp host deploy-network
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-deploy-fresh" class="md-nav__link">
+  <a href="#ctp-host-deploy-fresh" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-deploy-fresh
+      ctp host deploy-fresh
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-remove" class="md-nav__link">
+  <a href="#ctp-host-remove" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-remove
+      ctp host remove
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-rebuild-linode-vm" class="md-nav__link">
+  <a href="#ctp-host-rebuild-linode-vm" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-rebuild-linode-vm
+      ctp host rebuild-linode-vm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host update
     </span>
   </a>
   
@@ -1905,193 +2004,136 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#snapshot-modes" class="md-nav__link">
+  <a href="#vm-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Snapshot modes
+      VM commands
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Snapshot modes">
+    <nav class="md-nav" aria-label="VM commands">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ctp-snapshot" class="md-nav__link">
+  <a href="#ctp-vm-rename" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-snapshot
+      ctp vm rename
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-clean-snapshot" class="md-nav__link">
+  <a href="#ctp-vm-snapshot" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-clean-snapshot
+      ctp vm snapshot
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-live-snapshot" class="md-nav__link">
+  <a href="#ctp-vm-snapshot-create-clean" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-live-snapshot
+      ctp vm snapshot-create-clean
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-revert" class="md-nav__link">
+  <a href="#ctp-vm-snapshot-live" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-revert
+      ctp vm snapshot-live
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-remove-snapshot" class="md-nav__link">
+  <a href="#ctp-vm-snapshot-revert" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-remove-snapshot
+      ctp vm snapshot-revert
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-remove-all-snapshot" class="md-nav__link">
+  <a href="#ctp-vm-snapshot-remove" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-remove-all-snapshot
+      ctp vm snapshot-remove
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-rename-snapshot" class="md-nav__link">
+  <a href="#ctp-vm-snapshot-remove-all" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-rename-snapshot
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#power-state" class="md-nav__link">
-    <span class="md-ellipsis">
-      Power state
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Power state">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ctp-poweron" class="md-nav__link">
-    <span class="md-ellipsis">
-      ctp-poweron
+      ctp vm snapshot-remove-all
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-restart" class="md-nav__link">
+  <a href="#ctp-vm-snapshot-rename" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-restart
+      ctp vm snapshot-rename
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-shutdown" class="md-nav__link">
+  <a href="#ctp-vm-poweron" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-shutdown
+      ctp vm poweron
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-poweroff" class="md-nav__link">
+  <a href="#ctp-vm-restart" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-poweroff
+      ctp vm restart
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-reset" class="md-nav__link">
+  <a href="#ctp-vm-shutdown" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-reset
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#misc-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      MISC commands
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="MISC commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ctp-update-os" class="md-nav__link">
-    <span class="md-ellipsis">
-      ctp-update-os
+      ctp vm shutdown
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-list" class="md-nav__link">
+  <a href="#ctp-vm-poweroff" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-list
+      ctp vm poweroff
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-list-vars" class="md-nav__link">
+  <a href="#ctp-vm-reset" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-list-vars
+      ctp vm reset
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-rename-vm" class="md-nav__link">
+  <a href="#ctp-vm-suspend" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp-rename-vm
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ctp-get-ip" class="md-nav__link">
-    <span class="md-ellipsis">
-      ctp-get-ip
+      ctp vm suspend
     </span>
   </a>
   
@@ -2124,7 +2166,14 @@
 <p>Catapult's commands fall into two categories:</p>
 <ul>
 <li>External commands - All commands that start with <code>make</code> are external commands and are used to manage the Catapult container itself.</li>
-<li>Internal commands - All commands that start with <code>ctp-</code> are internal commands and are used when the user is inside the Catapult container.</li>
+<li>Internal commands - All commands that start with <code>ctp</code> are internal commands and are used when the user is inside the Catapult container.</li>
+</ul>
+<h2 id="variables">Variables</h2>
+<p>When running catapult for the first time it'll ask you to create a new Ansible Vault file and fill it out with your secrets. The secrets are used to connect to the hypervisors, cloud providers, and other services. Besides the required <code>deployer_username</code> &amp; <code>deployer_password</code> here are some other variables that you might need when using Catapult with <code>nova.core</code> collection:</p>
+<ul>
+<li><code>aws_access_key_id:</code> - AWS access key ID - can be generated from the AWS Identity and Access Management (IAM) console</li>
+<li><code>aws_access_key:</code> - AWS access key itself - can be generated from the AWS Identity and Access Management (IAM) console</li>
+<li><code>linode_api_token:</code> - Linode API token - can be generated from the Linode Cloud Manager https://cloud.linode.com/profile/tokens</li>
 </ul>
 <h2 id="enter-the-catapult">Enter the Catapult</h2>
 <ul>
@@ -2139,310 +2188,314 @@
 </code></pre>
 <h2 id="tips-and-tricks">Tips and tricks</h2>
 <ul>
-<li>Use tab completion to get the list of available commands. For example, type <code>ctp-</code> and press tab to get the list of available commands.</li>
+<li>Use tab completion to get the list of available commands. For example, type <code>ctp</code> and press tab to get the list of available commands.</li>
 <li>Use <code>Ctrl + R</code> to search through the command history and find the command you have used before. Fuzzy search is enabled so you can type parts of the commands or separate words that must be contained in the command.</li>
-<li>Use arrow up after you have started typing the command to get the previous command that starts the same way. For example, if you have used <code>ctp-deploy</code> before you can use arrow up to get the previous <code>ctp-deploy</code> commands.</li>
+<li>Use arrow up after you have started typing the command to get the previous command that starts the same way. For example, if you have used <code>ctp host deploy</code> before you can use arrow up to get the previous <code>ctp host deploy</code> commands.</li>
 </ul>
 <h2 id="general-commands">General commands</h2>
+<h3 id="ctp-secrets-edit">ctp secrets edit</h3>
 <ul>
-<li>Lists all available projects under /srv/inventories and allows you to select one if there is only one project the command will select it automatically. The command looks for projects that contain .git folder. If you are not using git for your project you can create an empty .git folder to make the project selectable.</li>
+<li>Open your Ansible Vault for editing your personal secrets. When saving the Vault the syntax will be checked and the Vault will be re-encrypted.</li>
 </ul>
-<pre><code class="language-zsh">ctp-select-project
+<pre><code class="language-zsh">ctp secrets edit
 </code></pre>
-<h2 id="deploy-commands">Deploy commands</h2>
-<p>Examples for the deploy commands are done with one machine but you can use the same commands with multiple machines by using the <code>all</code> keyword or a group_var. Use Ansible's documentation for <a href="https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html">Advanced deploy patterns</a></p>
-<h3 id="ctp-deploy">ctp-deploy</h3>
-<p>Run the full playbook and creates the VM if it doesn't exist</p>
-<p><em>Example usage:</em></p>
+<h3 id="ctp-secrets-change-password">ctp secrets change-password</h3>
 <ul>
-<li>Deploys the VM with the given inventory_hostname</li>
+<li>Change the password for your existing Ansible Vault file.</li>
 </ul>
-<pre><code class="language-zsh">ctp-deploy &lt;inventory_hostname&gt;
+<pre><code class="language-zsh">ctp secrets change-password
 </code></pre>
-<h3 id="ctp-redeploy">ctp-redeploy</h3>
-<p>Destroys the existing VM and runs the the <code>ctp-deploy</code> command</p>
-<p><em>Example usage:</em></p>
+<h3 id="ctp-project-select">ctp project select</h3>
 <ul>
-<li>Redeploys the VM with the given inventory_hostname</li>
+<li>Lists all available projects under /srv/inventories and allows you to select one if there is only one project the command will select it automatically. The command looks for projects that contain <code>.git</code> folder. If you are not using git for your project you can create an empty <code>.git</code> folder to make the project selectable.</li>
 </ul>
-<pre><code class="language-zsh">ctp-redeploy &lt;inventory_hostname&gt;
+<pre><code class="language-zsh">ctp project select
 </code></pre>
-<h3 id="ctp-deploy-until-configuration">ctp-deploy-until-configuration</h3>
-<p>Deploys the machine, stops the play after os_configuration role and creates a snapshot. This is a useful command if you want to create a snapshot of the VM after the OS is installed and configured. You can then use the snapshot to speed up the deployment/development process. You can deploy multiple machines that depend on each other in parallel and use the <code>ctp-deploy-from-configuration</code> to configure them in the correct order afterwards.</p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Deploys the VM with the given inventory_hostname and creates a snapshot</li>
-</ul>
-<pre><code class="language-zsh">ctp-deploy-until-configuration &lt;inventory_hostname&gt;
-</code></pre>
-<h3 id="ctp-redeploy-until-configuration">ctp-redeploy-until-configuration</h3>
-<p>Redeploys the machine, stops the play after os_configuration role and creates a snapshot. This is a useful command if you want to create a snapshot of the VM after the OS is installed and configured. You can then use the snapshot to speed up the deployment/development process. You can deploy multiple machines that depend on each other in parallel and use the <code>ctp-deploy-from-configuration</code> to configure them in the correct order afterwards.</p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Redeploys the VM with the given inventory_hostname and creates a snapshot</li>
-</ul>
-<pre><code class="language-zsh">ctp-redeploy-until-configuration &lt;inventory_hostname&gt;
-</code></pre>
-<h3 id="ctp-deploy-from-configuration">ctp-deploy-from-configuration</h3>
-<p>Starts the play from <code>/srv/&lt;project_name&gt;/pre_vm_role part</code> of the playbook and runs until the end. This is a useful command during mass deploy when you have run the <code>ctp-deploy-until-configuration</code> first and then you want to configure the cloned machines. Should anything go wrong you can always revert to the snapshot and start again.</p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Starts configuring the VM with the given inventory_hostname from the pre_vm_role.</li>
-</ul>
-<pre><code class="language-zsh">ctp-deploy-from-configuration &lt;inventory_hostname&gt;
-</code></pre>
-<h3 id="ctp-deploy-role">ctp-deploy-role</h3>
-<p>Runs only the <code>/srv/&lt;project_name&gt;/vm/&lt;role_name&gt;</code> part of the playbook and then stops. This is a useful during role developing and or when you want to minimize the time it takes to configure something. For an example only reconfiguring the user accounts of the machine by using single_role with <code>nova.core.accounts</code> role.</p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Only runs the role for inventory_hostname and then stops the play can also be used against all or group_var</li>
-</ul>
-<pre><code class="language-zsh">ctp-deploy-role &lt;inventory_hostname&gt;
-</code></pre>
-<ul>
-<li>Looks for role under defined path and only runs that and stops</li>
-</ul>
-<pre><code class="language-zsh">ctp-deploy-role &lt;inventory_hostname&gt; -e single_role=path/to/role
-</code></pre>
-<ul>
-<li>Looks for role with the fully qualified role name (FQCN) in the installed collections and only runs that and stops</li>
-</ul>
-<pre><code class="language-zsh">ctp-deploy-role &lt;inventory_hostname&gt; -e single_role=&lt;role.fqcn&gt;
-</code></pre>
-<h3 id="ctp-deploy-network">ctp-deploy-network</h3>
-<p>Runs ctp-deploy and also includes networks configuration role</p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Deploys the VM with the given inventory_hostname and also configures the networks</li>
-</ul>
-<pre><code class="language-zsh">ctp-deploy-network &lt;inventory_hostname&gt;
-</code></pre>
-<h3 id="ctp-deploy-fresh">ctp-deploy-fresh</h3>
-<p>Runs deploy as if the machine does not exist. This can be useful when deploy has failed before configuring accounts. Use this command to deploy the machine again as if it didn't exist and thus use the default values for the accounts.</p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Deploys the VM with the given inventory_hostname as if it didn't exist</li>
-</ul>
-<pre><code class="language-zsh">ctp-deploy-fresh &lt;inventory_hostname&gt;
-</code></pre>
-<h3 id="ctp-remove">ctp-remove</h3>
-<p>Destroys the existing VM</p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Destroys the VM with the given inventory_hostname</li>
-</ul>
-<pre><code class="language-zsh">ctp-remove &lt;inventory_hostname&gt;
-</code></pre>
-<h3 id="ctp-rebuild-linode-vm">ctp-rebuild-linode-vm</h3>
-<p>Rebuilds the existing Linode VM with a new disk but keeps the existing IP</p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Rebuilds the VM with the given inventory_hostname</li>
-</ul>
-<pre><code class="language-zsh">ctp-rebuild-linode-vm &lt;inventory_hostname&gt;
-</code></pre>
-<h2 id="deploy-commands-based-on-startretry-file">Deploy commands based on @start.retry file</h2>
-<p>Whenever a deploy fails a start.retry file is created under <code>/srv/inventories/&lt;project_name&gt;/start.retry</code>. Instead of going trough the logs to find what machines failed you can use the following commands to deploy only the failed machines. Keep in mind that only that latest fail is written into the start.retry file so when running multiple instances of Catapult (using <code>make shell</code> multiple times) and multiple deploys in parallel the latest fail will be written into the start.retry file.</p>
-<ul>
-<li>Run <code>ctp-deploy</code> on failed machines based on start.retry file</li>
-</ul>
-<pre><code class="language-zsh">ctp-retry-deploy
-</code></pre>
-<ul>
-<li>Run <code>ctp-redeploy</code> failed machines based on start.retry file</li>
-</ul>
-<pre><code class="language-zsh">ctp-retry-redeploy
-</code></pre>
-<ul>
-<li>Runs <code>ctp-deploy-until-configuration</code> on failed machines based on start.retry file</li>
-</ul>
-<pre><code class="language-zsh">ctp-retry-deploy-until-configuration
-</code></pre>
-<ul>
-<li>Runs <code>ctp-redeploy-until-configuration</code> on failed machines based on start.retry file</li>
-</ul>
-<pre><code class="language-zsh">ctp-retry-redeploy-until-configuration
-</code></pre>
-<ul>
-<li>Run <code>ctp-deploy-from-configuration</code> on failed machines based on start.retry file</li>
-</ul>
-<pre><code class="language-zsh">ctp-retry-deploy-from-configuration
-</code></pre>
-<ul>
-<li>Run <code>ctp-deploy-role</code> on failed machines based on start.retry file</li>
-</ul>
-<pre><code class="language-zsh">ctp-retry-deploy-role
-</code></pre>
-<h2 id="snapshot-modes">Snapshot modes</h2>
-<p>Different commands for managing machine snapshots. Note that the commands might not work with all providers. In that case you will receive a message that the command not implemented for the provider. Each snapshot creation command can have be appended with <code>- live_snap=true</code> to create a snapshot of a running machine.</p>
-<h3 id="ctp-snapshot">ctp-snapshot</h3>
-<p>Shuts down the VM, creates a snapshot and powers the VM back on.</p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Creates a snapshot of the VM for the given inventory_hostname with the default snapshot name</li>
-</ul>
-<pre><code class="language-zsh">ctp-snapshot &lt;inventory_hostname&gt;
-</code></pre>
-<ul>
-<li>Creates a snapshot of the VM for the given inventory_hostname with the given snapshot name</li>
-</ul>
-<pre><code class="language-zsh">ctp-snapshot &lt;inventory_hostname&gt; -e snapshot_name=&lt;snapshot_name&gt;
-</code></pre>
-<h3 id="ctp-clean-snapshot">ctp-clean-snapshot</h3>
-<p>Remove all existing snapshots and create a new snapshot of the VM</p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Removes all existing snapshots and creates a new snapshot of the VM for the given inventory_hostname</li>
-</ul>
-<pre><code class="language-zsh">ctp-clean-snapshot &lt;inventory_hostname&gt;
-</code></pre>
-<ul>
-<li>Removes all existing snapshots and creates a new snapshot of the VM for the given inventory_hostname with the given snapshot name</li>
-</ul>
-<pre><code class="language-zsh">ctp-clean-snapshot &lt;inventory_hostname&gt; -e snapshot_name=&lt;snapshot_name&gt;
-</code></pre>
-<h3 id="ctp-live-snapshot">ctp-live-snapshot</h3>
-<p>Creates a snapshot of a running machine including memory, mostly applicable to VMware products</p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Creates a live snapshot of the VM for the given inventory_hostname</li>
-</ul>
-<pre><code class="language-zsh">ctp-live-snapshot &lt;inventory_hostname&gt;
-</code></pre>
-<ul>
-<li>Creates a live snapshot of the VM for the given inventory_hostname with the given snapshot name</li>
-</ul>
-<pre><code class="language-zsh">ctp-live-snapshot &lt;inventory_hostname&gt; -e snapshot_name=&lt;snapshot_name&gt;
-</code></pre>
-<h3 id="ctp-revert">ctp-revert</h3>
-<p>Revert to the latest default snapshot or to the given snapshot name</p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Reverts the VM for the given inventory_hostname to the latest default snapshot</li>
-</ul>
-<pre><code class="language-zsh">ctp-revert &lt;inventory_hostname&gt;
-</code></pre>
-<ul>
-<li>Reverts the VM for the given inventory_hostname to the given snapshot name</li>
-</ul>
-<pre><code class="language-zsh">ctp-revert &lt;inventory_hostname&gt; -e snapshot_name=&lt;snapshot_name&gt;
-
-</code></pre>
-<h3 id="ctp-remove-snapshot">ctp-remove-snapshot</h3>
-<p>Removing snapshot, requires <code>-e snapshot_name=snapshot_name_to_remove</code> or removes current snapshot if snapshot_name is not defined</p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Removes the snapshot for the given inventory_hostname</li>
-</ul>
-<pre><code class="language-zsh">ctp-remove-snapshot &lt;inventory_hostname&gt; -e snapshot_name=snapshot_name_to_remove
-</code></pre>
-<h3 id="ctp-remove-all-snapshot">ctp-remove-all-snapshot</h3>
-<ul>
-<li>Removes all snapshots for the given inventory_hostname</li>
-</ul>
-<pre><code class="language-zsh">ctp-remove-all-snapshot &lt;inventory_hostname&gt;
-</code></pre>
-<h3 id="ctp-rename-snapshot">ctp-rename-snapshot</h3>
-<p>Renaming snapshot, requires <code>-e snapshot_name=existing_snapshot_name_to_rename -e new_snapshot_name=new_snapshot_name</code></p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Renames the snapshot for given inventory_hostname machine</li>
-</ul>
-<pre><code class="language-zsh">ctp-rename-snapshot &lt;inventory_hostname&gt; -e snapshot_name=existing_snapshot_name_to_rename -e new_snapshot_name=new_snapshot_name
-</code></pre>
-<h2 id="power-state">Power state</h2>
-<p>These commands are for managing the power state of the VMs. Without connection to them over SSH. For an example using VMTools on VMware products.</p>
-<h3 id="ctp-poweron">ctp-poweron</h3>
-<p>Power on VM</p>
-<h3 id="ctp-restart">ctp-restart</h3>
-<p>Restart VM</p>
-<h3 id="ctp-shutdown">ctp-shutdown</h3>
-<p>Shut down VM (graceful shutdown)</p>
-<h3 id="ctp-poweroff">ctp-poweroff</h3>
-<p>Power off VM (ungraceful shutdown)</p>
-<h3 id="ctp-reset">ctp-reset</h3>
-<p>Reset VM (very ungraceful)</p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Powers on the VM for the given inventory_hostname</li>
-</ul>
-<pre><code class="language-zsh">ctp-poweron &lt;inventory_hostname&gt;
-</code></pre>
-<ul>
-<li>Restarts the VM for the given inventory_hostname</li>
-</ul>
-<pre><code class="language-zsh">ctp-restart &lt;inventory_hostname&gt;
-</code></pre>
-<ul>
-<li>Shuts down the VM for the given inventory_hostname</li>
-</ul>
-<pre><code class="language-zsh">ctp-shutdown &lt;inventory_hostname&gt;
-</code></pre>
-<ul>
-<li>Powers off the VM for the given inventory_hostname</li>
-</ul>
-<pre><code class="language-zsh">ctp-poweroff &lt;inventory_hostname&gt;
-</code></pre>
-<ul>
-<li>Resets the VM for the given inventory_hostname</li>
-</ul>
-<pre><code class="language-zsh">ctp-reset &lt;inventory_hostname&gt;
-</code></pre>
-<h2 id="misc-commands">MISC commands</h2>
-<h3 id="ctp-update-os">ctp-update-os</h3>
-<p>Runs only the <code>nova.core.updates</code> role on the given targets. Useful for only updating the OS packages.</p>
-<p><em>Example usage:</em></p>
-<ul>
-<li>Updates the OS packages for the given inventory_hostname</li>
-</ul>
-<pre><code class="language-zsh">ctp-update-os &lt;inventory_hostname&gt;
-</code></pre>
-<h3 id="ctp-list">ctp-list</h3>
+<h2 id="host-commands">Host commands</h2>
+<p>Examples for the commands that are run against the inventory_hostname or group in Ansible. These commands usually interact with the target OS and the hypervisor. Use Ansible's documentation for <a href="https://docs.ansible.com/ansible/latest/user_guide/intro_patterns.html">Advanced deploy patterns</a></p>
+<h3 id="ctp-host-list">ctp host list</h3>
 <p>List the inventory_hostnames for the given project, group_var or just to check if the inventory_hostname is valid. This command is useful to use a a pre-check before running any of the other commands. You can make sure that your advanced regex is correct and you don't run the command on the wrong inventory_hostname.</p>
 <p><em>Example usage:</em></p>
 <ul>
 <li>Checks if the inventory_hostnames exists</li>
 </ul>
-<pre><code class="language-zsh">ctp-list &lt;inventory_hostname&gt;
+<pre><code class="language-zsh">ctp host list &lt;inventory_hostname&gt;
 </code></pre>
 <ul>
 <li>Lists all of the inventory_hostnames for the given project</li>
 </ul>
-<pre><code class="language-zsh">ctp-list all
+<pre><code class="language-zsh">ctp host list all
 </code></pre>
 <ul>
 <li>Lists all of the inventory_hostnames for the given group_var</li>
 </ul>
-<pre><code class="language-zsh">ctp-list &lt;group_var&gt;
+<pre><code class="language-zsh">ctp host list &lt;group_var&gt;
 </code></pre>
-<h3 id="ctp-list-vars">ctp-list-vars</h3>
+<h3 id="ctp-host-vars">ctp host vars</h3>
 <p>List (most) of the variables for the given inventory_hostname. This command is useful to check what variables are available in the given inventory_hostname. It is not a complete list of all the variables because of home some <code>host_vars</code> get loaded but it's useful when getting started with the role development.</p>
 <p><em>Example usage:</em></p>
 <ul>
 <li>Lists the variables for the given inventory_hostname</li>
 </ul>
-<pre><code class="language-zsh">ctp-list-vars &lt;inventory_hostname&gt;
+<pre><code class="language-zsh">ctp host vars &lt;inventory_hostname&gt;
 </code></pre>
-<h3 id="ctp-rename-vm">ctp-rename-vm</h3>
+<h3 id="ctp-host-ip">ctp host ip</h3>
+<p>Getting the IP's and FQDN of the VM. Based on the hypervisor or cloud provider and the project the command will look up the IP from the inventory variables or the machine itself. In the latter case the machine needs to be up and running.</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Gets the IP's and FQDN of the VM for the given inventory_hostname</li>
+</ul>
+<pre><code class="language-zsh">ctp host ip &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-host-deploy">ctp host deploy</h3>
+<p>Run the full playbook and creates the VM if it doesn't exist</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Deploys the VM with the given inventory_hostname</li>
+</ul>
+<pre><code class="language-zsh">ctp host deploy &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-host-redeploy">ctp host redeploy</h3>
+<p>Destroys the existing VM and runs the the <code>ctp host deploy</code> command</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Redeploys the VM with the given inventory_hostname</li>
+</ul>
+<pre><code class="language-zsh">ctp host redeploy &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-host-deploy-until-configuration">ctp host deploy-until-configuration</h3>
+<p>Deploys the machine, stops the play after os_configuration role and creates a snapshot. This is a useful command if you want to create a snapshot of the VM after the OS is installed and configured. You can then use the snapshot to speed up the deployment/development process. You can deploy multiple machines that depend on each other in parallel and use the <code>ctp host deploy-from-configuration</code> to configure them in the correct order afterwards.</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Deploys the VM with the given inventory_hostname and creates a snapshot</li>
+</ul>
+<pre><code class="language-zsh">ctp host deploy-until-configuration &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-host-redeploy-until-configuration">ctp host redeploy-until-configuration</h3>
+<p>Redeploys the machine, stops the play after os_configuration role and creates a snapshot. This is a useful command if you want to create a snapshot of the VM after the OS is installed and configured. You can then use the snapshot to speed up the deployment/development process. You can deploy multiple machines that depend on each other in parallel and use the <code>ctp host deploy-from-configuration</code> to configure them in the correct order afterwards.</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Redeploys the VM with the given inventory_hostname and creates a snapshot</li>
+</ul>
+<pre><code class="language-zsh">ctp host redeploy-until-configuration &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-deploy-from-configuration">ctp-deploy-from-configuration</h3>
+<p>Starts the play from <code>/srv/&lt;project_name&gt;/pre_vm_role part</code> of the playbook and runs until the end. This is a useful command during mass deploy when you have run the <code>ctp host deploy-until-configuration</code> first and then you want to configure the cloned machines. Should anything go wrong you can always revert to the snapshot and start again.</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Starts configuring the VM with the given inventory_hostname from the pre_vm_role.</li>
+</ul>
+<pre><code class="language-zsh">ctp host deploy-from-configuration &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-host-deploy-role">ctp host deploy-role</h3>
+<p>Runs only the <code>/srv/&lt;project_name&gt;/vm/&lt;role_name&gt;</code> part of the playbook and then stops. This is a useful during role developing and or when you want to minimize the time it takes to configure something. For an example only reconfiguring the user accounts of the machine by using single_role with <code>nova.core.accounts</code> role.</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Only runs the role for inventory_hostname and then stops the play can also be used against all or group_var</li>
+</ul>
+<pre><code class="language-zsh">ctp host deploy-role &lt;inventory_hostname&gt;
+</code></pre>
+<ul>
+<li>Looks for role under defined path and only runs that and stops</li>
+</ul>
+<pre><code class="language-zsh">ctp host deploy-role &lt;inventory_hostname&gt; -e single_role=path/to/role
+</code></pre>
+<ul>
+<li>Looks for role with the fully qualified role name (FQCN) in the installed collections and only runs that and stops</li>
+</ul>
+<pre><code class="language-zsh">ctp host deploy-role &lt;inventory_hostname&gt; -e single_role=&lt;role.fqcn&gt;
+</code></pre>
+<h3 id="ctp-host-deploy-network">ctp host deploy-network</h3>
+<p>Runs ctp host deploy and also includes networks configuration role</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Deploys the VM with the given inventory_hostname and also configures the networks</li>
+</ul>
+<pre><code class="language-zsh">ctp host deploy-network &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-host-deploy-fresh">ctp host deploy-fresh</h3>
+<p>Runs deploy as if the machine does not exist. This can be useful when deploy has failed before configuring accounts. Use this command to deploy the machine again as if it didn't exist and thus use the default values for the accounts.</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Deploys the VM with the given inventory_hostname as if it didn't exist</li>
+</ul>
+<pre><code class="language-zsh">ctp host deploy-fresh &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-host-remove">ctp host remove</h3>
+<p>Destroys the existing VM</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Destroys the VM with the given inventory_hostname</li>
+</ul>
+<pre><code class="language-zsh">ctp host remove &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-host-rebuild-linode-vm">ctp host rebuild-linode-vm</h3>
+<p>Rebuilds the existing Linode VM with a new disk but keeps the existing IP</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Rebuilds the VM with the given inventory_hostname</li>
+</ul>
+<pre><code class="language-zsh">ctp host rebuild-linode-vm &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-host-update">ctp host update</h3>
+<p>Runs only the <code>nova.core.updates</code> role on the given targets. Useful for only updating the OS packages.</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Updates the OS packages for the given inventory_hostname</li>
+</ul>
+<pre><code class="language-zsh">ctp host update &lt;inventory_hostname&gt;
+</code></pre>
+<h2 id="deploy-commands-based-on-startretry-file">Deploy commands based on @start.retry file</h2>
+<p>Whenever a deploy fails a start.retry file is created under <code>/srv/inventories/&lt;project_name&gt;/start.retry</code>. Instead of going trough the logs to find what machines failed you can use the following commands to deploy only the failed machines. Keep in mind that only that latest fail is written into the start.retry file so when running multiple instances of Catapult (using <code>make shell</code> multiple times) and multiple deploys in parallel the latest fail will be written into the start.retry file.</p>
+<ul>
+<li>Runs <code>ctp host deploy</code> on failed machines based on start.retry file</li>
+</ul>
+<pre><code class="language-zsh">ctp retry deploy
+</code></pre>
+<ul>
+<li>Runs <code>ctp host redeploy</code> failed machines based on start.retry file</li>
+</ul>
+<pre><code class="language-zsh">ctp retry redeploy
+</code></pre>
+<ul>
+<li>Runs <code>ctp host deploy-until-configuration</code> on failed machines based on start.retry file</li>
+</ul>
+<pre><code class="language-zsh">ctp retry deploy-until-configuration
+</code></pre>
+<ul>
+<li>Runs <code>ctp host redeploy-until-configuration</code> on failed machines based on start.retry file</li>
+</ul>
+<pre><code class="language-zsh">ctp retry redeploy-until-configuration
+</code></pre>
+<ul>
+<li>Runs <code>ctp host deploy-from-configuration</code> on failed machines based on start.retry file</li>
+</ul>
+<pre><code class="language-zsh">ctp retry deploy-from-configuration
+</code></pre>
+<ul>
+<li>Runs <code>ctp host deploy-role</code> on failed machines based on start.retry file</li>
+</ul>
+<pre><code class="language-zsh">ctp retry deploy-role
+</code></pre>
+<h2 id="vm-commands">VM commands</h2>
+<p>These commands will be used to manage the VMs from the hypervisor or cloud provider.</p>
+<h3 id="ctp-vm-rename">ctp vm rename</h3>
 <p>Renaming VM. This command is useful when the naming scheme for the VMs has changed and you want to rename some or all of them for the project.</p>
 <p><em>Example usage:</em></p>
 <ul>
 <li>Renames the VM for the given inventory_hostname with the given values</li>
 </ul>
-<pre><code class="language-zsh">ctp-rename-vm &lt;inventory_hostname&gt; -e old_vm_name=&lt;old_name&gt; -e new_vm_name=&lt;new_name&gt;
+<pre><code class="language-zsh">ctp vm rename &lt;inventory_hostname&gt; -e old_vm_name=&lt;old_name&gt; -e new_vm_name=&lt;new_name&gt;
 </code></pre>
 <ul>
-<li>Renames the VM for the given inventory_hostname where the old name is the current value defined in</li>
+<li>Renames the VM for the given inventory_hostname where the old name is the current value defined in the group or host vars</li>
 </ul>
-<pre><code class="language-zsh">cpp-rename-vm &lt;inventory_hostname&gt; -e new_vm_name=&lt;new_name&gt;the group or host vars
+<pre><code class="language-zsh">ctp vm rename &lt;inventory_hostname&gt; -e new_vm_name=&lt;new_name&gt;
 </code></pre>
-<h3 id="ctp-get-ip">ctp-get-ip</h3>
-<p>Getting the IP's and FQDN of the VM</p>
+<h3 id="ctp-vm-snapshot">ctp vm snapshot</h3>
+<p>Shuts down the VM, creates a snapshot and powers the VM back on.</p>
 <p><em>Example usage:</em></p>
 <ul>
-<li>Gets the IP's and FQDN of the VM for the given inventory_hostname</li>
+<li>Creates a snapshot of the VM for the given inventory_hostname with the default snapshot name</li>
 </ul>
-<pre><code class="language-zsh">ctp-get-ip &lt;inventory_hostname&gt;
+<pre><code class="language-zsh">ctp vm snapshot &lt;inventory_hostname&gt;
+</code></pre>
+<ul>
+<li>Creates a snapshot of the VM for the given inventory_hostname with the given snapshot name</li>
+</ul>
+<pre><code class="language-zsh">ctp vm snapshot &lt;inventory_hostname&gt; -e snapshot_name=&lt;snapshot_name&gt;
+</code></pre>
+<h3 id="ctp-vm-snapshot-create-clean">ctp vm snapshot-create-clean</h3>
+<p>Remove all existing snapshots and create a new snapshot of the VM</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Removes all existing snapshots and creates a new snapshot of the VM for the given inventory_hostname</li>
+</ul>
+<pre><code class="language-zsh">ctp vm snapshot-create-clean &lt;inventory_hostname&gt;
+</code></pre>
+<ul>
+<li>Removes all existing snapshots and creates a new snapshot of the VM for the given inventory_hostname with the given snapshot name</li>
+</ul>
+<pre><code class="language-zsh">ctp vm snapshot-create-clean &lt;inventory_hostname&gt; -e snapshot_name=&lt;snapshot_name&gt;
+</code></pre>
+<h3 id="ctp-vm-snapshot-live">ctp vm snapshot-live</h3>
+<p>Creates a snapshot of a running machine including memory, mostly applicable to VMware products</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Creates a live snapshot of the VM for the given inventory_hostname</li>
+</ul>
+<pre><code class="language-zsh">ctp vm snapshot-live &lt;inventory_hostname&gt;
+</code></pre>
+<ul>
+<li>Creates a live snapshot of the VM for the given inventory_hostname with the given snapshot name</li>
+</ul>
+<pre><code class="language-zsh">ctp vm snapshot-live &lt;inventory_hostname&gt; -e snapshot_name=&lt;snapshot_name&gt;
+</code></pre>
+<h3 id="ctp-vm-snapshot-revert">ctp vm snapshot-revert</h3>
+<p>Revert to the latest default snapshot or to the given snapshot name</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Reverts the VM for the given inventory_hostname to the latest default snapshot</li>
+</ul>
+<pre><code class="language-zsh">ctp vm snapshot-revert &lt;inventory_hostname&gt;
+</code></pre>
+<ul>
+<li>Reverts the VM for the given inventory_hostname to the given snapshot name</li>
+</ul>
+<pre><code class="language-zsh">ctp vm snapshot-revert &lt;inventory_hostname&gt; -e snapshot_name=&lt;snapshot_name&gt;
+
+</code></pre>
+<h3 id="ctp-vm-snapshot-remove">ctp vm snapshot-remove</h3>
+<p>Removing snapshot, requires <code>-e snapshot_name=snapshot_name_to_remove</code> or removes current snapshot if snapshot_name is not defined</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Removes the snapshot for the given inventory_hostname</li>
+</ul>
+<pre><code class="language-zsh">ctp vm snapshot-remove &lt;inventory_hostname&gt; -e snapshot_name=snapshot_name_to_remove
+</code></pre>
+<h3 id="ctp-vm-snapshot-remove-all">ctp vm snapshot-remove-all</h3>
+<ul>
+<li>Removes all snapshots for the given inventory_hostname</li>
+</ul>
+<pre><code class="language-zsh">ctp vm snapshot-remove-all &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-vm-snapshot-rename">ctp vm snapshot-rename</h3>
+<p>Renaming snapshot, requires <code>-e snapshot_name=existing_snapshot_name_to_rename -e new_snapshot_name=new_snapshot_name</code></p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Renames the snapshot for given inventory_hostname machine</li>
+</ul>
+<pre><code class="language-zsh">ctp vm snapshot-rename &lt;inventory_hostname&gt; -e snapshot_name=existing_snapshot_name_to_rename -e new_snapshot_name=new_snapshot_name
+</code></pre>
+<h3 id="ctp-vm-poweron">ctp vm poweron</h3>
+<p>Power on VM</p>
+<p><em>Example usage:</em></p>
+<pre><code class="language-zsh">ctp vm poweron &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-vm-restart">ctp vm restart</h3>
+<p>Restart VM</p>
+<p><em>Example usage:</em></p>
+<pre><code class="language-zsh">ctp vm restart &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-vm-shutdown">ctp vm shutdown</h3>
+<p>Shut down VM (graceful shutdown)</p>
+<p><em>Example usage:</em></p>
+<pre><code class="language-zsh">ctp vm shutdown &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-vm-poweroff">ctp vm poweroff</h3>
+<p>Power off VM (ungraceful shutdown)</p>
+<p><em>Example usage:</em></p>
+<pre><code class="language-zsh">ctp vm poweroff &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-vm-reset">ctp vm reset</h3>
+<p>Reset VM (very ungraceful)</p>
+<p><em>Example usage:</em></p>
+<pre><code class="language-zsh">ctp vm reset &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-vm-suspend">ctp vm suspend</h3>
+<p>Suspend VM</p>
+<p><em>Example usage:</em></p>
+<pre><code class="language-zsh">ctp vm suspend &lt;inventory_hostname&gt;
 </code></pre>
 
 
