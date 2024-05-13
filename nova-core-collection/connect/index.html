@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../snapshots/">
+        <link rel="prev" href="../configure_package_mirrors/">
       
       
-        <link rel="next" href="../trusted_certificates/">
+        <link rel="next" href="../connection/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>template_os_configuration - Catapult Docs</title>
+        <title>connect - Catapult Docs</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#template_os_configuration" class="md-skip">
+        <a href="#connect" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              template_os_configuration
+              connect
             
           </span>
         </div>
@@ -662,10 +662,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../connect/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    connect
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -674,6 +694,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1208,30 +1284,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    template_os_configuration
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../template_os_configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1240,62 +1296,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Role Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1535,25 +1535,23 @@
   
 
 
-<h1 id="template_os_configuration">template_os_configuration</h1>
-<p>This is a role to pre-configure a VM template. It is recommended that you have your VM templates in separate project or separately in your project's inventory so you use this role to configure them for use with the rest of the roles in this collection.</p>
+<h1 id="connect">connect</h1>
+<p>This role saves the connection information for the inventory_hostname and that info can be used to connect th the machine over supported protocols:</p>
+<ul>
+<li>SSH</li>
+</ul>
 <h2 id="requirements">Requirements</h2>
 <p>none</p>
 <h2 id="role-variables">Role Variables</h2>
-<p>Refer to the <a href="https://github.com/novateams/nova.core/blob/main/nova/core/roles/template_os_configuration/defaults/main.yml">defaults/main.yml</a> file for a list and description of the variables used in this role.</p>
-<p>Currently some of the when conditions expect you to have specifically named group vars defined for certain settings to applied.</p>
-<p>Examples:</p>
-<p><code>os_bsd</code> - for BSD based distros
-<code>os_linux</code> - for Linux based distros
-<code>os_windows</code> - for Windows OS</p>
+<p>Refer to <a href="https://github.com/novateams/nova.core/blob/main/nova/core/roles/connect/defaults/main.yml">defaults/main.yml</a> for the full list of variables.</p>
 <h2 id="dependencies">Dependencies</h2>
 <p>none</p>
 <h2 id="example">Example</h2>
-<pre><code class="language-yaml">- name: Including OS configuration role with updates...
-  ansible.builtin.include_role:
-    name: nova.core.template_os_configuration
-  vars:
-    update_system: true
+<p>Manually after including the role:</p>
+<pre><code class="language-bash">ssh $(cat /tmp/ansible_connect)
+</code></pre>
+<p>Or with Catapult:</p>
+<pre><code class="language-bash">ctp host connect &lt;TAB&gt;
 </code></pre>
 
 
