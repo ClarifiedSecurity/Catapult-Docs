@@ -579,6 +579,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ctp-host-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host connect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host console
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2010,6 +2028,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ctp-host-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host connect
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctp-host-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      ctp host console
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2365,6 +2401,22 @@
 <li>Updates the OS packages for the given inventory_hostname</li>
 </ul>
 <pre><code class="language-zsh">ctp host update &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-host-connect">ctp host connect</h3>
+<p>Finds the IP and user credentials for a an inventory_hostname and connects to the machine using SSH.</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Connect to given inventory_hostname over SSH from the Catapult container</li>
+</ul>
+<pre><code class="language-zsh">ctp host connect &lt;inventory_hostname&gt;
+</code></pre>
+<h3 id="ctp-host-console">ctp host console</h3>
+<p>Enters <a href="https://docs.ansible.com/ansible/latest/cli/ansible-console.html">Ansible console</a> for a given inventory_hostname. This is useful when you want to run ad-hoc commands on the machine or debug variables.</p>
+<p><em>Example usage:</em></p>
+<ul>
+<li>Enters Ansible console for the given inventory_hostname</li>
+</ul>
+<pre><code class="language-zsh">ctp host console &lt;inventory_hostname&gt;
 </code></pre>
 <h2 id="deploy-commands-based-on-startretry-file">Deploy commands based on @start.retry file</h2>
 <p>Whenever a deploy fails a start.retry file is created under <code>/srv/inventories/&lt;project_name&gt;/start.retry</code>. Instead of going trough the logs to find what machines failed you can use the following commands to deploy only the failed machines. Keep in mind that only that latest fail is written into the start.retry file so when running multiple instances of Catapult (using <code>make shell</code> multiple times) and multiple deploys in parallel the latest fail will be written into the start.retry file.</p>
