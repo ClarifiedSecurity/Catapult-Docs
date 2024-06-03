@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
     
     
       
@@ -387,6 +387,15 @@
   <a href="#enter-the-catapult" class="md-nav__link">
     <span class="md-ellipsis">
       Enter the Catapult
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projects
     </span>
   </a>
   
@@ -794,27 +803,6 @@
   
   <span class="md-ellipsis">
     VM Template Requirements
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../90-set-up-keepass/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    KeePassXC setup
   </span>
   
 
@@ -1842,6 +1830,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tips-and-tricks" class="md-nav__link">
     <span class="md-ellipsis">
       Tips and tricks
@@ -2243,6 +2240,8 @@
 </ul>
 <pre><code class="language-sh">make restart
 </code></pre>
+<h2 id="projects">Projects</h2>
+<p>Catapult is designed to work with multiple projects. Each project has its own inventory, roles, and variables. The project is selected when the user enters the Catapult container. The project is selected based on the presence of the <code>.git</code> folder in the <code>/srv/inventories</code> project directory subfolder. If there is only one project the command will select it automatically. Refer to <a href="https://github.com/ClarifiedSecurity/catapult-project-example">catapult-project-example</a> on how to structure your project.</p>
 <h2 id="tips-and-tricks">Tips and tricks</h2>
 <ul>
 <li>Use tab completion to get the list of available commands. For example, type <code>ctp</code> and press tab to get the list of available commands.</li>
