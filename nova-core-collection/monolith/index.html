@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../cleanup/">
+        <link rel="prev" href="../machine_operations/">
       
       
-        <link rel="next" href="../configure_package_mirrors/">
+        <link rel="next" href="../nexus/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>configure_networking - Catapult Docs</title>
+        <title>monolith - Catapult Docs</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configure_networking" class="md-skip">
+        <a href="#monolith" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              configure_networking
+              monolith
             
           </span>
         </div>
@@ -599,30 +599,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    configure_networking
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../configure_networking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,62 +611,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Role Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1116,10 +1040,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../monolith/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    monolith
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1128,6 +1072,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1556,72 +1556,124 @@
   
 
 
-<h1 id="configure_networking">configure_networking</h1>
-<p>This is a role to configure networking for a VM after cloning. Currently it is only supporting network configuration for VMs deployed on VMware vSphere, but the scripts are more or less universal and can be modified to add support to different hypervisors. <a href="https://github.com/novateams/nova.core/tree/main/nova/core/roles/configure_networking/tasks/vsphere">Here</a> is a list of all supported network methods.</p>
+<h1 id="monolith">monolith</h1>
+<p>This is a role for combining multiple roles into a single role for installing and configuring a monolithic application on a target machine.
+This role combines the following roles:</p>
+<ul>
+<li><code>nova.core.caddy</code></li>
+<li><code>nova.core.vault</code></li>
+<li><code>nova.core.keycloak</code></li>
+<li><code>nova.core.providentia</code></li>
+<li><code>nova.core.nexus</code></li>
+</ul>
+<p>It's meant for easy deployment of all required services for running a Cyber Exercise.</p>
 <h2 id="requirements">Requirements</h2>
-<p>None</p>
+<ul>
+<li>Pre existing/installed and configured Active Directory (AD) server for LDAPs.</li>
+<li>Pre installed Debian based OS (Ubuntu 22.04 preferred) with SSH &amp; sudo access where the application will be installed if not pre-existing infrastructure is present.</li>
+<li>TLS certificates under the <code>/srv/certs</code> directory for using TLS. Alternatively, the <code>nova.core.caddy</code> role can be used to generate self-signed certificates.</li>
+<li>The DNS names defined in <code>monolith_*</code> variables must be resolvable from the host where this role is executed from.</li>
+</ul>
 <h2 id="role-variables">Role Variables</h2>
-<p>The variable structure is based on <a href="https://github.com/ClarifiedSecurity/Providentia">Providentia</a> API output. When using file based inventory then make sure to follow the same structure. Check the example blow for more details.</p>
-<p>The variable <code>customization_method</code> can take: <code>bsd</code>, <code>macos</code>, <code>netplan</code>, <code>networkd</code>, <code>nmcli</code>, <code>routeros</code>, <code>vyos</code>, <code>windows_cli</code></p>
-<p>When selecting the network configuration method via the variable <code>customization_method</code>, if you are selecting <code>networkd</code> option, an extra variable is needed because this option can be used with different OS: <code>customization_method_distribution</code>. Possible options: <code>Debian</code>, <code>Archlinux</code>, <code>Scientific</code></p>
-<p>Refer to <a href="https://github.com/novateams/nova.core/blob/main/nova/core/roles/configure_networking/defaults/main.yml">defaults/main.yml</a> for the full list of variables.</p>
-<p><code>extra_routes</code> - Can be set to add extra routes per interfaces. Supported only for <code>netplan</code></p>
-<pre><code class="language-yaml"># Example on how to configure extra routes when netplaN interface is named vpn
-extra_routes:
-  vpn:
-    - to: 10.0.0.0/8
-      via: 10.0.0.1
-</code></pre>
-<p><code>extra_ipv4</code> - Can be set to add extra IPv4 addresses per interfaces
-<code>extra_ipv6</code> - Can be set to add extra IPv6 addresses per interfaces</p>
-<pre><code class="language-yaml"># Example on how to configure extra IPv4 addresses when interface is named vpn
-extra_ipv4:
-  vpn:
-    - 10.0.0.10/24
-    - 10.0.0.11/24
-    - 10.0.0.12/24
+<p>These variables need to be defined in the host_var or passed from command line in order to connect and configure the previously cloned host where the monolith will be installed.</p>
+<pre><code class="language-yaml">infra_env: external # This says that the host where monolith is manually set up and not cloned by nova.core.machine_operations rol
+save_secrets_to_vault: false # By default  not saving secrets to vault because we're setting it up in this run
 
-extra_ipv6:
-  vpn:
-    - fd00:1234:5678:abcd::1234/64
-    - fd00:1234:5678:abcd::1235/64
-    - fd00:1234:5678:abcd::1236/64
+# This is list of internal CA certificates will trusted by the monolith services for an example for LDAPS.
+# Remove this list if globally trusted CA certificates are used also for LDAPs.
+trusted_certificates_list:
+  - name: LDAPS
+    src: &quot;{{ inventory_dir }}/files/LDAPS.crt&quot;
+
+connection_address: 10.10.10.10 # This is the IP address of the host where monolith will be installed
+ansible_deployer_username: # This is the username that will be used to connect to the host
+ansible_deployer_password: # This is the password that will be used to connect to the host
+hostname: # This is the hostname that will be set for the host
+domain: # This is the domain that will be set for the host
+ad_domain_name: &quot;{{ domain }}&quot;
+fqdn: &quot;{{ hostname }}.{{ domain }}&quot;
 </code></pre>
+<p>Although there are some variables available to this role, it recommended to only set values for variables defined in the example below. This is a kickstart role and should be used as such. Advanced users can install the individual roles separately for more control.</p>
 <h2 id="dependencies">Dependencies</h2>
-<p>None</p>
+<p>none</p>
 <h2 id="example">Example</h2>
-<p>When not using Providentia define the the network configuration in host/group/etc vars in the following format:</p>
-<pre><code class="language-yaml"># Example on how to configure single network interface with static IPv4 and IPv6 addresses and an extra IPv6 address for management traffic
-# You can remove the addresses you don't need
-# Any undefined value leave to null to avoid errors
-interfaces:
-  - network_id: my-network-name # Some type of identifiable name. It'll be used for an example in netplan and nmcli interface name
-    cloud_id: my-cloud-name # This is a vSphere portgroup name
-    domain: my.domain.com
-    fqdn: my-host.my.domain.com # FQDN of the VM where the network will be configured
-    egress: true # Whether the network is used for egress traffic (connecting to the internet)
-    connection: true # Whether the network is used for management traffic (connecting over ssh)
-    addresses:
-      - pool_id: default-ipv4 # IP pool name
-        mode: ipv4_static # IP address mode leave as it is
-        connection: false # Whether this IP address is used for management traffic
-        address: 192.168.0.0/24 # IP address and subnet mask
-        dns_enabled: true # Whether this IP will be registered in DNS (Requires some type of DNS integration)
-        gateway: 192.168.0.1 # Gateway IP address
+<pre><code class="language-yaml"># Example on how to install and configure all monolith services when using LetsEncrypt (or other globally trusted CA) certificates
+dependencies:
+  - role: nova.core.trusted_certificates # This will created a JKS file from the trusted certificates.
+    vars:
+      trusted_certificates_to_jks: true
 
-      - pool_id: default-ipv6 # IP pool name
-        mode: ipv6_static # IP address mode leave as it is
-        connection: false # Whether this IP address is used for management traffic
-        address: 2001:0db8:85a3:0000:0000:8a2e:0370:7334/64 # IP address and prefix
-        dns_enabled: true # Whether this IP will be registered in DNS (Requires some type of DNS integration)
-        gateway: 2001:0db8:85a3:0000:0000:8a2e:0370:7331 # Gateway IP address
+  - role: nova.core.monolith
+    vars:
+      monolith_providentia_fqdn: providentia.{{ domain }} # This is the FQDN that will be used for Providentia
+      monolith_nexus_fqdn: nexus.{{ domain }} # This is the FQDN that will be used for Nexus
+      monolith_keycloak_fqdn: keycloak.{{ domain }} # This is the FQDN that will be used for Keycloak
+      monolith_vault_fqdn: vault.{{ domain }} # This is the FQDN that will be used for Vault
 
-      - pool_id: mgmt-ipv6 # IP pool name make sure it contains mgmt
-        mode: ipv6_static # IP address mode leave as it is
-        connection: true # Whether this IP address is used for management traffic
-        address: fd00:1234:5678:abcd::1234/64 # IP address and prefix
-        dns_enabled: false # Whether this IP will be registered in DNS (Requires some type of DNS integration)
-        gateway: null # Gateway IP address
+      ############
+      # Keycloak #
+      ############
+
+      keycloak_use_custom_jks: false # Set to true if using internal CA that is not trusted by Keycloak by default
+      keycloak_realms:
+        - realm_name: Apps
+          sso_session_idle_timeout: 172800 ## 2 days
+          sso_session_max_lifespan: 604800 ## 7 days
+          configure_ldap: yes
+          ldap_server: ldaps://dc1.example.com # This is the LDAP server that will be used for Keycloak
+          users_search_dn: OU=Users,DC=example,DC=com # This is the search base for users in LDAP
+          bind_user_dn: CN=keycloak.service.account,OU=Service Accounts,DC=example,DC=com # This is the bind user for LDAP
+          bind_user_password: Password123 # This is the password for the bind user
+          custom_user_search_filter:
+            - &quot;(&amp;(objectClass=person)(mail=*))&quot; # This is the custom user search filter for LDAP that makes sure only users with email are imported
+
+          ldap_role_mappers:
+            - client_name: Providentia # This is the client name that will be used for LDAP role mapping
+              ldap_groups_dn: OU=Groups,DC=example,DC=com # This is the search base for groups in LDAP
+
+          clients:
+            - client_name: Providentia
+              admin_uri: https://{{ monolith_providentia_fqdn }}
+              base_uri: https://{{ monolith_providentia_fqdn }}
+              redirect_uris:
+                - https://{{ monolith_providentia_fqdn }}/*
+              root_uri: https://{{ monolith_providentia_fqdn }}
+              weborigin_uris:
+                - https://{{ monolith_providentia_fqdn }}/*
+              create_client_scope: yes
+
+      ###############
+      # Providentia #
+      ###############
+
+      providentia_app_fqdn: &quot;{{ monolith_providentia_fqdn }}&quot;
+      providentia_resource_prefix: providentia- # This is the resource prefix that will be used for Providentia, all LDAP groups must start with this prefix. For logging into Providentia, the user must be a member of a providentia-Admin group.
+
+      #########
+      # Vault #
+      #########
+
+      vault_proxy_container_name: caddy
+      vault_binddn: CN=vault.service.account,OU=Service Accounts,DC=example,DC=com # This is the bind user for LDAP
+      vault_bindpass: Password123 # This is the password for the bind user
+      vault_groupdn: OU=Groups,DC=example,DC=com # This is the search base for groups in LDAP
+      vault_upndomain: &quot;{{ domain }}&quot; # This is the UPN domain for LDAP
+      vault_ldaps_url: ldaps://dc1.example.com # This is the LDAP server that will be used for Vault
+      vault_userdn: OU=Users,DC=example,DC=com # This is the search base for users in LDAP
+      vault_ldap_admin_group_name: vault-admins # This is the LDAP group that will have admin access to Vault
+
+      #########
+      # Nexus #
+      #########
+
+      nexus_proxy_container_name: caddy
+      nexus_ldap_name: &quot;{{ domain }}&quot; # This is the name of the LDAP configuration in Nexus
+      nexus_ldap_host: dc1.example.com # This is the LDAP server that will be used for Nexus
+      nexus_ldap_search_base: DC=example,DC=com # This is the search base for users in LDAP
+      nexus_bind_user_dn: CN=nexus.service.account,OU=Service Accounts,DC=example,DC=com # This is the bind user for LDAP
+      nexus_groups_dn_under_searchbase: OU=Groups # This is the search base for groups in LDAP under the nexus_ldap_search_base
+      nexus_bind_dn_password: Password123 # This is the password for the bind user
+      nexus_ldap_administrators_group: nexus-admins # This is the group that will be used for Nexus administrators
 </code></pre>
 
 

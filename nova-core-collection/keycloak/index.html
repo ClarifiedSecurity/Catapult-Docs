@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../cleanup/">
+        <link rel="prev" href="../join_domain/">
       
       
-        <link rel="next" href="../configure_package_mirrors/">
+        <link rel="next" href="../linux_xrdp_keyboard/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>configure_networking - Catapult Docs</title>
+        <title>keycloak - Catapult Docs</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configure_networking" class="md-skip">
+        <a href="#keycloak" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              configure_networking
+              keycloak
             
           </span>
         </div>
@@ -599,30 +599,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    configure_networking
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../configure_networking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,62 +611,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Role Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1032,10 +956,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../keycloak/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    keycloak
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1044,6 +988,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1556,72 +1556,51 @@
   
 
 
-<h1 id="configure_networking">configure_networking</h1>
-<p>This is a role to configure networking for a VM after cloning. Currently it is only supporting network configuration for VMs deployed on VMware vSphere, but the scripts are more or less universal and can be modified to add support to different hypervisors. <a href="https://github.com/novateams/nova.core/tree/main/nova/core/roles/configure_networking/tasks/vsphere">Here</a> is a list of all supported network methods.</p>
+<h1 id="keycloak">keycloak</h1>
+<p>This is a role for installing and configuring Keycloak Docker based on a target machine.</p>
 <h2 id="requirements">Requirements</h2>
-<p>None</p>
+<ul>
+<li>Pre installed certificates under the <code>/srv/certs</code> directory for using TLS.</li>
+<li>Pre installed web server for reverse proxying, <code>nova.core.caddy</code> can be used for this purpose.</li>
+</ul>
 <h2 id="role-variables">Role Variables</h2>
-<p>The variable structure is based on <a href="https://github.com/ClarifiedSecurity/Providentia">Providentia</a> API output. When using file based inventory then make sure to follow the same structure. Check the example blow for more details.</p>
-<p>The variable <code>customization_method</code> can take: <code>bsd</code>, <code>macos</code>, <code>netplan</code>, <code>networkd</code>, <code>nmcli</code>, <code>routeros</code>, <code>vyos</code>, <code>windows_cli</code></p>
-<p>When selecting the network configuration method via the variable <code>customization_method</code>, if you are selecting <code>networkd</code> option, an extra variable is needed because this option can be used with different OS: <code>customization_method_distribution</code>. Possible options: <code>Debian</code>, <code>Archlinux</code>, <code>Scientific</code></p>
-<p>Refer to <a href="https://github.com/novateams/nova.core/blob/main/nova/core/roles/configure_networking/defaults/main.yml">defaults/main.yml</a> for the full list of variables.</p>
-<p><code>extra_routes</code> - Can be set to add extra routes per interfaces. Supported only for <code>netplan</code></p>
-<pre><code class="language-yaml"># Example on how to configure extra routes when netplaN interface is named vpn
-extra_routes:
-  vpn:
-    - to: 10.0.0.0/8
-      via: 10.0.0.1
-</code></pre>
-<p><code>extra_ipv4</code> - Can be set to add extra IPv4 addresses per interfaces
-<code>extra_ipv6</code> - Can be set to add extra IPv6 addresses per interfaces</p>
-<pre><code class="language-yaml"># Example on how to configure extra IPv4 addresses when interface is named vpn
-extra_ipv4:
-  vpn:
-    - 10.0.0.10/24
-    - 10.0.0.11/24
-    - 10.0.0.12/24
-
-extra_ipv6:
-  vpn:
-    - fd00:1234:5678:abcd::1234/64
-    - fd00:1234:5678:abcd::1235/64
-    - fd00:1234:5678:abcd::1236/64
-</code></pre>
+<p>Refer to the <a href="https://github.com/novateams/nova.core/blob/main/nova/core/roles/keycloak/defaults/main.yml">defaults/main.yml</a> file for a list and description of the variables used in this role.</p>
 <h2 id="dependencies">Dependencies</h2>
-<p>None</p>
+<ul>
+<li><code>nova.core.docker</code></li>
+</ul>
 <h2 id="example">Example</h2>
-<p>When not using Providentia define the the network configuration in host/group/etc vars in the following format:</p>
-<pre><code class="language-yaml"># Example on how to configure single network interface with static IPv4 and IPv6 addresses and an extra IPv6 address for management traffic
-# You can remove the addresses you don't need
-# Any undefined value leave to null to avoid errors
-interfaces:
-  - network_id: my-network-name # Some type of identifiable name. It'll be used for an example in netplan and nmcli interface name
-    cloud_id: my-cloud-name # This is a vSphere portgroup name
-    domain: my.domain.com
-    fqdn: my-host.my.domain.com # FQDN of the VM where the network will be configured
-    egress: true # Whether the network is used for egress traffic (connecting to the internet)
-    connection: true # Whether the network is used for management traffic (connecting over ssh)
-    addresses:
-      - pool_id: default-ipv4 # IP pool name
-        mode: ipv4_static # IP address mode leave as it is
-        connection: false # Whether this IP address is used for management traffic
-        address: 192.168.0.0/24 # IP address and subnet mask
-        dns_enabled: true # Whether this IP will be registered in DNS (Requires some type of DNS integration)
-        gateway: 192.168.0.1 # Gateway IP address
+<pre><code class="language-yaml"># Example on how to install Keycloak with Providentia client and LDAPs (AD) group mapper
+dependencies:
+  - role: nova.core.keycloak
+    vars:
+      keycloak_use_custom_jks: false # Set to true if using internal CA that is not trusted by Keycloak by default
+      keycloak_realms:
+        - realm_name: Apps
+          sso_session_idle_timeout: 172800 ## 2 days
+          sso_session_max_lifespan: 604800 ## 7 days
+          configure_ldap: yes
+          ldap_server: ldaps://dc1.example.com
+          users_search_dn: OU=Users,DC=example,DC=com
+          bind_user_dn: CN=keycloak.service.account,OU=Service Accounts,DC=example,DC=com
+          bind_user_password: Password123
+          custom_user_search_filter:
+            - &quot;(&amp;(objectClass=person)(mail=*))&quot;
 
-      - pool_id: default-ipv6 # IP pool name
-        mode: ipv6_static # IP address mode leave as it is
-        connection: false # Whether this IP address is used for management traffic
-        address: 2001:0db8:85a3:0000:0000:8a2e:0370:7334/64 # IP address and prefix
-        dns_enabled: true # Whether this IP will be registered in DNS (Requires some type of DNS integration)
-        gateway: 2001:0db8:85a3:0000:0000:8a2e:0370:7331 # Gateway IP address
+          ldap_role_mappers:
+            - client_name: Providentia
+              ldap_groups_dn: OU=Groups,DC=example,DC=com
 
-      - pool_id: mgmt-ipv6 # IP pool name make sure it contains mgmt
-        mode: ipv6_static # IP address mode leave as it is
-        connection: true # Whether this IP address is used for management traffic
-        address: fd00:1234:5678:abcd::1234/64 # IP address and prefix
-        dns_enabled: false # Whether this IP will be registered in DNS (Requires some type of DNS integration)
-        gateway: null # Gateway IP address
+          clients:
+            - client_name: Providentia
+              admin_uri: https://providentia.example.com
+              base_uri: https://providentia.example.com
+              redirect_uris:
+                - https://providentia.example.com/*
+              root_uri: https://providentia.example.com
+              weborigin_uris:
+                - https://providentia.example.com/*
+              create_client_scope: yes
 </code></pre>
 
 

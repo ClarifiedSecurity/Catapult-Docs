@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
@@ -171,7 +171,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -1017,6 +1017,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../nova-core-collection/keycloak/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    keycloak
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../nova-core-collection/linux_xrdp_keyboard/" class="md-nav__link">
         
   
@@ -1064,6 +1085,27 @@
   
   <span class="md-ellipsis">
     Role Name
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nova-core-collection/monolith/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    monolith
   </span>
   
 
@@ -1479,7 +1521,7 @@
 
 
 <h1 id="catapult-customizer-example">Catapult Customizer Example</h1>
-<p>This is an example <a href="https://github.com/ClarifiedSecurity/catapult-customizer">repo</a> to show how to Customize <a href="https://github.com/ClarifiedSecurity/catapult">Catapult</a> for your organization or teams needs. To use this repo you need to create your own Git project (in a Git server of your choice) and then fill it out with the examples shown here. After that is done fill out <code>MAKEVAR_CATAPULT_CUSTOMIZER_REPO</code> in your Catapult's <code>.makerc-vars</code> file to include the customizations.</p>
+<p>This is an example <a href="https://github.com/ClarifiedSecurity/catapult-customizer">repo</a> to show how to Customize <a href="https://github.com/ClarifiedSecurity/catapult">Catapult</a> for your organization or team needs. To use this repo you need to create your own Git project (in a Git server of your choice) and then fill it out with the examples shown here. After that is done fill out <code>MAKEVAR_CATAPULT_CUSTOMIZER_REPO</code> in your Catapult's <code>.makerc-vars</code> file to include the customizations.</p>
 <p><strong>DELETE ALL CUSTOMIZATION FOLDER AND FILE EXAMPLES THAT YOU WILL NOT BE USING</strong> - Otherwise empty folder will be included overriding the default files.</p>
 <p>The structure of the customization repo is as follows:</p>
 <h2 id="folders">Folders</h2>
@@ -1500,9 +1542,6 @@
 <p><code>makefiles</code> - Contains custom .makerc* files specific to your organization or project. Refer to the default <a href="https://github.com/ClarifiedSecurity/Catapult/blob/main/.makerc">.makerc</a> file for examples and the <a href="https://github.com/ClarifiedSecurity/Catapult/blob/main/Makefile#L3-L5">Makefile</a> for different types of makefiles that get loaded if they exists.</p>
 </li>
 <li>
-<p><code>requirements</code> - Contains different *.yml files that will be used to install the Ansible roles and collections. Refer to <a href="https://docs.ansible.com/ansible/latest/collections_guide/collections_installing.html">Ansible docs</a> or default <a href="https://github.com/ClarifiedSecurity/catapult/blob/main/defaults/requirements.yml">requirements</a> for how-to guide or examples.</p>
-</li>
-<li>
 <p><code>scripts</code> - Contains custom scripts that can be used with the project. For example with <code>make</code> commands</p>
 </li>
 <li>
@@ -1511,9 +1550,6 @@
 </ul>
 <h2 id="files">Files</h2>
 <ul>
-<li>
-<p><code>example.makerc-vars</code> - When using non-default .makerc-vars then make sure that `example.makerc-vars is also defined in the Catapult Customizer repo because there are helper scripts that will check if your .makerc-vars contains all of the variables based on the example.makerc-vars.</p>
-</li>
 <li>
 <p><code>start.yml</code> - In some rare cases you might want to customize the deployment tree of Catapult. For that you can create your own start.yml file and it will be used instead of the default one. Refer to the default <a href="https://github.com/ClarifiedSecurity/Catapult/blob/main/defaults/start.yml">start.yml</a> as an example.</p>
 </li>
@@ -1596,7 +1632,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>
