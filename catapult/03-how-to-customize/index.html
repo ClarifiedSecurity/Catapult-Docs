@@ -1629,7 +1629,7 @@
 <li>Adding specific functions that are not available in the defaults</li>
 </ul>
 <h3 id="personal-makefile-configuration">Personal makefile configuration</h3>
-<p><code>personal/.makerc-personal</code> - This file is used to add custom makefile variables that are specific to the user.</p>
+<p><code>personal/.makerc-personal</code> - This file is used to add custom makefile variables that are specific to the user. Refer to the <code>.makerc-vars</code> file for available options.</p>
 <p>Potential use cases for this file include:</p>
 <ul>
 <li>Adding custom make commands that are specific to the user</li>
@@ -1637,7 +1637,7 @@
 <h2 id="personal-cli-commands">Personal CLI commands</h2>
 <p><code>personal/autocomplete.yml</code> - This file is used to add custom autocomplete commands for <code>ctp</code> that are specific to the user. Refer to the default <a href="https://github.com/ClarifiedSecurity/catapult/blob/main/defaults/autocomplete.yml">autocomplete.yml</a> as an example</p>
 <h2 id="customization">Customization</h2>
-<p>To customize Catapult for your team or organization, a separate git project needs to be created that contains all of the required files. Then users need to be pointed that project using the <code>MAKEVAR_CATAPULT_CUSTOMIZER_REPO</code> variable in their <code>.makerc-vars</code> file. For a full list of available options, see the example <a href="https://github.com/ClarifiedSecurity/catapult-customizer">Catapult Customizer</a> repo.</p>
+<p>To customize Catapult for your team or organization, a separate git project needs to be created that contains all of the required files. Then users need to be pointed that project using the <code>MAKEVAR_CATAPULT_CUSTOMIZER_REPO</code> variable in their <code>personal/.makerc-personal</code> file. For a full list of available options, see the example <a href="https://github.com/ClarifiedSecurity/catapult-customizer">Catapult Customizer</a> repo.</p>
 
 
 
