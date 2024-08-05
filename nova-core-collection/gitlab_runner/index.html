@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../docker/">
+        <link rel="prev" href="../gitlab/">
       
       
-        <link rel="next" href="../finalize/">
+        <link rel="next" href="../join_domain/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>expo - Catapult Docs</title>
+        <title>Currently supported runner types - Catapult Docs</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#expo" class="md-skip">
+        <a href="#currently-supported-runner-types" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              expo
+              Currently supported runner types
             
           </span>
         </div>
@@ -830,30 +830,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    expo
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../expo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -862,62 +842,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Role Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1032,10 +956,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../gitlab_runner/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1044,6 +977,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1559,50 +1493,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Role Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1619,21 +1509,54 @@
   
 
 
-<h1 id="expo">expo</h1>
-<p>This role is used to deploy Exercise Portal (EXPO) to a VM.</p>
-<h2 id="requirements">Requirements</h2>
-<p>Certificates, which are defined in the defaults.</p>
-<h2 id="role-variables">Role Variables</h2>
-<p>See <a href="https://github.com/novateams/nova.core/blob/main/nova/core/roles/expo/defaults/main.yml">defaults/main.yml</a> for the full list of variables.</p>
-<h2 id="dependencies">Dependencies</h2>
+<h1 id="currently-supported-runner-types">Currently supported runner types</h1>
 <ul>
-<li>Depends on Docker and Docker Compose being installed on the host. Docker can be installed using the <a href="https://github.com/novateams/nova.core/tree/main/nova/core/roles/docker">nova.core.docker</a> role.</li>
+<li>Docker exec runners, installed on linux (docker needs to be installed beforehand).</li>
+<li>PowerShell runners, installed on windows.</li>
 </ul>
-<h2 id="example">Example</h2>
-<pre><code class="language-yaml">- name: Including connection role
-  include_role:
-    name: nova.core.expo
+<h1 id="registration-now-uses-authentication-tokens">Registration now uses authentication tokens</h1>
+<p>Introduced in GitLab 15.10, runner registration flow is now moving towards authentication tokens only, previously used registration tokens will be deprecated in Gitlab 18.x.</p>
+<p>This means you need acquire an access token from gitlab, before installing and registering new gitlab-runners.</p>
+<p>Define your auth token in a runner specific <code>auth_token</code> variable.</p>
+<pre><code>gitlab_runner_docker_runners:
+  - name: docker_01
+    auth_token: glrt-TOKEN
+    privileged: false
+    executor_image: ubuntu:22.04
 </code></pre>
+<h1 id="usage">Usage</h1>
+<p>The minimal set of variables to install and register your runner.</p>
+<ul>
+<li>
+<p><code>gitlab_inventory_hostname</code> or <code>gitlab_runner_gitlab_url</code> to define which gitlab will the runner register itself. Can be set globally, or separate in the named runner definition, as <code>gitlab_url</code></p>
+</li>
+<li>
+<p><code>gitlab_runner_version</code> is defined in defaults, can override separately with <code>gitlab_runner_docker_version_tag</code> or <code>gitlab_runner_windows_runner_version</code></p>
+</li>
+</ul>
+<p>An example of a Docker-in-Docker runner for builing container images.</p>
+<pre><code>gitlab_runner_docker_runners:
+  - name: dind_01
+    auth_token: glrt-TOKEN
+    privileged: false
+    services_privileged: true
+    extra_hosts:
+      - &quot;{{ gitlab_runner_gitlab_fqdn }}:{{ hostvars[gitlab_inventory_hostname].primary_ipv4 }}&quot;
+      - &quot;gitlab-registry.{{ domain }}:{{ hostvars[gitlab_inventory_hostname].primary_ipv4 }}&quot;
+    allowed_privileged_services:
+      - docker.io/library/docker:*-dind
+      - docker.io/library/docker:dind
+      - docker:*-dind
+      - docker:dind
+    executor_image: docker:git
+    executor_volumes:
+      - /certs/client ## needed for dind
+      - /var/lib/docker ## for docker image cache on the dind service container
+      - /cache
+      - /etc/ssl/certs/ca-certificates.crt:/etc/ssl/certs/ca-certificates.crt:ro
+</code></pre>
+<h1 id="_1"></h1>
+<p>Tags, locked, paused, run_untagged etc runner options are no longer set through gitlab-runner registration, and are now configured only in Gitlab.</p>
 
 
 
