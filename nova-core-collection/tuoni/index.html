@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../finalize/">
+        <link rel="prev" href="../trusted_certificates/">
       
       
-        <link rel="next" href="../generate_credentials/">
+        <link rel="next" href="../updates/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Role Name - Catapult Docs</title>
+        <title>tuoni - Catapult Docs</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#role-name" class="md-skip">
+        <a href="#tuoni" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Role Name
+              tuoni
             
           </span>
         </div>
@@ -872,30 +872,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Role Name
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../gather_facts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -904,62 +884,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Role Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1410,10 +1334,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../tuoni/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    tuoni
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1422,6 +1366,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1661,19 +1661,17 @@
   
 
 
-<h1 id="role-name">Role Name</h1>
-<p>This role is used to gather facts about the target being managed. A separate role is used to better filter between different OS types and their gather facts modules. Also so this role can be dynamically included in other roles.</p>
+<h1 id="tuoni">tuoni</h1>
+<p>This is a role for installing the <a href="https://tuoni.io/">Tuoni C2 framework</a> on Debian-based host.</p>
 <h2 id="requirements">Requirements</h2>
 <p>none</p>
 <h2 id="role-variables">Role Variables</h2>
-<p>none</p>
+<p>Refer to <a href="https://github.com/novateams/nova.core/blob/main/nova/core/roles/tuoni/defaults/main.yml">defaults/main.yml</a> for the full list of variables.</p>
 <h2 id="dependencies">Dependencies</h2>
 <p>none</p>
 <h2 id="example">Example</h2>
-<pre><code class="language-yml"># Gathering facts for any OS supported by this collection
-- name: Including gather_facts role...
-  ansible.builtin.include_role:
-    name: nova.core.gather_facts
+<pre><code class="language-yaml">- name: Including Tuoni role...
+  ansible.builtin.include_role: nova.core.tuoni
 </code></pre>
 
 

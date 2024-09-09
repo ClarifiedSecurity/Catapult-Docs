@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../finalize/">
+        <link rel="prev" href="../win_sysprep/">
       
-      
-        <link rel="next" href="../generate_credentials/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Role Name - Catapult Docs</title>
+        <title>win_test_pending_reboot - Catapult Docs</title>
       
     
     
@@ -72,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#role-name" class="md-skip">
+        <a href="#win_test_pending_reboot" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Role Name
+              win_test_pending_reboot
             
           </span>
         </div>
@@ -872,30 +870,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Role Name
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../gather_facts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -904,62 +882,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Role Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1557,10 +1479,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../win_test_pending_reboot/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    win_test_pending_reboot
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1569,6 +1511,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1661,19 +1659,19 @@
   
 
 
-<h1 id="role-name">Role Name</h1>
-<p>This role is used to gather facts about the target being managed. A separate role is used to better filter between different OS types and their gather facts modules. Also so this role can be dynamically included in other roles.</p>
+<h1 id="win_test_pending_reboot">win_test_pending_reboot</h1>
+<p>This role tests if a Windows host has a pending reboot. It downloads and installs the <a href="https://www.powershellgallery.com/packages/PendingReboot">PendingReboot</a> PowerShell module from the PowerShell Gallery and uses it to check if a reboot is required.</p>
 <h2 id="requirements">Requirements</h2>
-<p>none</p>
+<p>None</p>
 <h2 id="role-variables">Role Variables</h2>
 <p>none</p>
 <h2 id="dependencies">Dependencies</h2>
-<p>none</p>
+<p>None</p>
 <h2 id="example">Example</h2>
-<pre><code class="language-yml"># Gathering facts for any OS supported by this collection
-- name: Including gather_facts role...
+<pre><code class="language-yml"># Include the role
+- name: Including the win_test_pending_reboot module...
   ansible.builtin.include_role:
-    name: nova.core.gather_facts
+    name: nova.core.win_test_pending_reboot
 </code></pre>
 
 
