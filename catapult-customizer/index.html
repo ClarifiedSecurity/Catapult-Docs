@@ -485,17 +485,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Catapult Customizer Example
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -505,43 +494,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#folders" class="md-nav__link">
-    <span class="md-ellipsis">
-      Folders
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Files
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1583,32 +1535,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#folders" class="md-nav__link">
-    <span class="md-ellipsis">
-      Folders
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Files
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1626,42 +1552,8 @@
 
 
 <h1 id="catapult-customizer-example">Catapult Customizer Example</h1>
-<p>This is an example <a href="https://github.com/ClarifiedSecurity/catapult-customizer">repo</a> to show how to Customize <a href="https://github.com/ClarifiedSecurity/catapult">Catapult</a> for your organization or team needs. To use this repo you need to create your own Git project (in a Git server of your choice) and then fill it out with the examples shown here. After that is done fill out <code>MAKEVAR_CATAPULT_CUSTOMIZER_REPO</code> in your Catapult's <code>.makerc-vars</code> file to include the customizations.</p>
-<p><strong>DELETE ALL CUSTOMIZATION FOLDER AND FILE EXAMPLES THAT YOU WILL NOT BE USING</strong> - Otherwise empty folder will be included overriding the default files.</p>
-<p>The structure of the customization repo is as follows:</p>
-<h2 id="folders">Folders</h2>
-<ul>
-<li>
-<p><code>certificates</code> - Contains the trusted certificate files that will be installed into the container. The certificate format must be base64 and the file name format must be <certificate_name>.crt</p>
-</li>
-<li>
-<p><code>container</code> - Contains .custom_aliases file that will be copied into the container. Refer to the <a href="https://github.com/ClarifiedSecurity/Catapult/blob/main/container/home/builder/.default_aliases">.default_aliases</a> file as an example on how to create .custom_aliases.</p>
-</li>
-<li>
-<p><code>docker</code> - Contains custom <code>docker-compose-custom.yml</code> to add extra environment variables/volumes/etc to the container. Refer to the default <a href="https://github.com/ClarifiedSecurity/catapult/blob/main/defaults/docker-compose-custom.yml">docker-compose-custom.yml</a> &amp; <a href="https://github.com/ClarifiedSecurity/catapult/blob/main/docker/docker-compose.yml">docker-compose.yml</a> for examples.</p>
-</li>
-<li>
-<p><code>docker-entrypoints</code> - Contains custom docker-entrypoint scripts that will run inside the container during <code>make start</code>. Refer to default <a href="https://github.com/ClarifiedSecurity/Catapult/tree/main/scripts/entrypoints">entrypoint</a> scripts for examples.</p>
-</li>
-<li>
-<p><code>makefiles</code> - Contains custom .makerc* files specific to your organization or project. Refer to the default <a href="https://github.com/ClarifiedSecurity/Catapult/blob/main/.makerc">.makerc</a> file for examples and the <a href="https://github.com/ClarifiedSecurity/Catapult/blob/main/Makefile#L3-L5">Makefile</a> for different types of makefiles that get loaded if they exists.</p>
-</li>
-<li>
-<p><code>scripts</code> - Contains custom scripts that can be used with the project. For example with <code>make</code> commands</p>
-</li>
-<li>
-<p><code>start-tasks</code> - Contains scripts that will be run on the host during container startup. Refer to existing <a href="https://github.com/ClarifiedSecurity/Catapult/tree/main/scripts/start-tasks">start-tasks</a> for examples.</p>
-</li>
-</ul>
-<h2 id="files">Files</h2>
-<ul>
-<li>
-<p><code>start.yml</code> - In some rare cases you might want to customize the deployment tree of Catapult. For that you can create your own start.yml file and it will be used instead of the default one. Refer to the default <a href="https://github.com/ClarifiedSecurity/Catapult/blob/main/defaults/start.yml">start.yml</a> as an example.</p>
-</li>
-<li>
-<p><code>autocomplete.yml</code> - Contains custom completion commands that can be used with the <code>ctp</code> command in the container. Refer to the default <a href="https://github.com/ClarifiedSecurity/catapult/blob/main/defaults/autocomplete.yml">autocomplete.yml</a> as an example.</p>
-</li>
-</ul>
+<p>This is an example to Customize <a href="https://github.com/ClarifiedSecurity/catapult">Catapult</a> for your organization or team needs. Read the <a href="https://clarifiedsecurity.github.io/catapult-docs/catapult/03-how-to-customize/">Customization</a> section in the documentation for more information.</p>
+<p><strong>DELETE ALL CUSTOMIZATION FOLDER AND FILE EXAMPLES THAT YOU WILL NOT BE USING</strong> - Otherwise empty folder and files will be included overriding the default files.</p>
 
 
 
