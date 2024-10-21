@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../customization_single_role/">
+        <link rel="prev" href="../finalize/">
       
       
-        <link rel="next" href="../docker/">
+        <link rel="next" href="../gather_facts/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>deploy_vars - Catapult Docs</title>
+        <title>firewall - Catapult Docs</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deploy_vars" class="md-skip">
+        <a href="#firewall" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              deploy_vars
+              firewall
             
           </span>
         </div>
@@ -809,30 +809,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    deploy_vars
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../deploy_vars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -841,62 +821,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Role Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -969,10 +893,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../firewall/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    firewall
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -981,6 +925,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1703,18 +1703,24 @@
   
 
 
-<h1 id="deploy_vars">deploy_vars</h1>
-<p>This role is used to set required deploy variables. Is is used as the very first role in the deploy process. By using this role, we can ensure that all required variables are set before any other roles are executed. This role also caches the required variables in a file so that they can be used by other roles.</p>
+<h1 id="firewall">firewall</h1>
+<p>This role is used to install nftables or iptables and template the corresponding configuration for it.</p>
 <h2 id="requirements">Requirements</h2>
-<p>none</p>
+<p>Based on the selected mode needs iptables or nftables configuration files to be present in the <code>templates</code> directory of the role that includes the firewall role. For the configuration path variables Refer to <a href="https://github.com/novateams/nova.core/blob/main/nova/core/roles/firewall/defaults/main.yml">defaults/main.yml</a></p>
 <h2 id="role-variables">Role Variables</h2>
-<p>Refer to the <a href="https://github.com/novateams/nova.core/blob/main/nova/core/roles/deploy_vars/defaults/main.yml">defaults/main.yml</a> file for a list and description of the variables used in this role.</p>
+<p>Refer to <a href="https://github.com/novateams/nova.core/blob/main/nova/core/roles/firewall/defaults/main.yml">defaults/main.yml</a> for the full list of variables, their default values and descriptions.</p>
 <h2 id="dependencies">Dependencies</h2>
 <p>none</p>
 <h2 id="example">Example</h2>
-<pre><code class="language-yaml">- name: Including deploy_vars role...
+<pre><code class="language-yaml">- name: Including firewall role installing nftables and templating config...
   ansible.builtin.include_role:
-    name: nova.core.deploy_vars
+    name: nova.core.firewall
+
+- name: Including firewall role installing iptables and templating config......
+  ansible.builtin.include_role:
+    name: nova.core.firewall
+  vars:
+    mode: iptables
 </code></pre>
 
 

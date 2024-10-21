@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../customization_single_role/">
+        <link rel="prev" href="../40-how-to-customize/">
       
       
-        <link rel="next" href="../docker/">
+        <link rel="next" href="../91-generate-ssh-keypair/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>deploy_vars - Catapult Docs</title>
+        <title>VM Template Requirements - Catapult Docs</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deploy_vars" class="md-skip">
+        <a href="#vm-template-requirements" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              deploy_vars
+              VM Template Requirements
             
           </span>
         </div>
@@ -268,17 +268,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -292,7 +294,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Catapult
@@ -306,7 +308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../catapult/01-installation/" class="md-nav__link">
+      <a href="../01-installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -327,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../catapult/20-how-to-use/" class="md-nav__link">
+      <a href="../20-how-to-use/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -348,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../catapult/30-how-to-personalize/" class="md-nav__link">
+      <a href="../30-how-to-personalize/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -369,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../catapult/40-how-to-customize/" class="md-nav__link">
+      <a href="../40-how-to-customize/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -387,10 +389,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../catapult/50-template-requirements/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    VM Template Requirements
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -399,6 +421,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#base-template-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base template requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Base template requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#per-environmentprojectdatacenter-etc-template-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Per-environment/project/datacenter etc. template requirements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -411,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../catapult/91-generate-ssh-keypair/" class="md-nav__link">
+      <a href="../91-generate-ssh-keypair/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -432,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../catapult/92-contributing/" class="md-nav__link">
+      <a href="../92-contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,19 +604,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -546,7 +628,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Nova core collection
@@ -560,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../accounts/" class="md-nav__link">
+      <a href="../../nova-core-collection/accounts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -581,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../caddy/" class="md-nav__link">
+      <a href="../../nova-core-collection/caddy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -602,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cleanup/" class="md-nav__link">
+      <a href="../../nova-core-collection/cleanup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -623,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configure_networking/" class="md-nav__link">
+      <a href="../../nova-core-collection/configure_networking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -644,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configure_package_mirrors/" class="md-nav__link">
+      <a href="../../nova-core-collection/configure_package_mirrors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -665,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../connect/" class="md-nav__link">
+      <a href="../../nova-core-collection/connect/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -686,7 +768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../connection/" class="md-nav__link">
+      <a href="../../nova-core-collection/connection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -707,7 +789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization/" class="md-nav__link">
+      <a href="../../nova-core-collection/customization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -728,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization_post_vm_role/" class="md-nav__link">
+      <a href="../../nova-core-collection/customization_post_vm_role/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -749,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization_pre_role/" class="md-nav__link">
+      <a href="../../nova-core-collection/customization_pre_role/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -770,7 +852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization_pre_vm_role/" class="md-nav__link">
+      <a href="../../nova-core-collection/customization_pre_vm_role/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,7 +873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization_single_role/" class="md-nav__link">
+      <a href="../../nova-core-collection/customization_single_role/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -809,30 +891,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    deploy_vars
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../nova-core-collection/deploy_vars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -841,62 +903,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Role Variables
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -909,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
+      <a href="../../nova-core-collection/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -930,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../expo/" class="md-nav__link">
+      <a href="../../nova-core-collection/expo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -951,7 +957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../finalize/" class="md-nav__link">
+      <a href="../../nova-core-collection/finalize/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -972,7 +978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../firewall/" class="md-nav__link">
+      <a href="../../nova-core-collection/firewall/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -993,7 +999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gather_facts/" class="md-nav__link">
+      <a href="../../nova-core-collection/gather_facts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1014,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../generate_credentials/" class="md-nav__link">
+      <a href="../../nova-core-collection/generate_credentials/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1035,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../get_ip/" class="md-nav__link">
+      <a href="../../nova-core-collection/get_ip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1056,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gitlab/" class="md-nav__link">
+      <a href="../../nova-core-collection/gitlab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1077,7 +1083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gitlab_runner/" class="md-nav__link">
+      <a href="../../nova-core-collection/gitlab_runner/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1098,7 +1104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../join_domain/" class="md-nav__link">
+      <a href="../../nova-core-collection/join_domain/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1119,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../keycloak/" class="md-nav__link">
+      <a href="../../nova-core-collection/keycloak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1140,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linux_xrdp_keyboard/" class="md-nav__link">
+      <a href="../../nova-core-collection/linux_xrdp_keyboard/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1161,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linux_xrdp_server/" class="md-nav__link">
+      <a href="../../nova-core-collection/linux_xrdp_server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1182,7 +1188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../machine_operations/" class="md-nav__link">
+      <a href="../../nova-core-collection/machine_operations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1203,7 +1209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../monolith/" class="md-nav__link">
+      <a href="../../nova-core-collection/monolith/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1224,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nexus/" class="md-nav__link">
+      <a href="../../nova-core-collection/nexus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1245,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../os_configuration/" class="md-nav__link">
+      <a href="../../nova-core-collection/os_configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1266,7 +1272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../outline/" class="md-nav__link">
+      <a href="../../nova-core-collection/outline/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1287,7 +1293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../powerstate/" class="md-nav__link">
+      <a href="../../nova-core-collection/powerstate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1308,7 +1314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../providentia/" class="md-nav__link">
+      <a href="../../nova-core-collection/providentia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1329,7 +1335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rename_vm/" class="md-nav__link">
+      <a href="../../nova-core-collection/rename_vm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1350,7 +1356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../role_metadata_post/" class="md-nav__link">
+      <a href="../../nova-core-collection/role_metadata_post/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1371,7 +1377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../secrets_to_vault/" class="md-nav__link">
+      <a href="../../nova-core-collection/secrets_to_vault/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1392,7 +1398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../snapshots/" class="md-nav__link">
+      <a href="../../nova-core-collection/snapshots/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1413,7 +1419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../template_os_configuration/" class="md-nav__link">
+      <a href="../../nova-core-collection/template_os_configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1434,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../trusted_certificates/" class="md-nav__link">
+      <a href="../../nova-core-collection/trusted_certificates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1455,7 +1461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tuoni/" class="md-nav__link">
+      <a href="../../nova-core-collection/tuoni/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1476,7 +1482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../updates/" class="md-nav__link">
+      <a href="../../nova-core-collection/updates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1497,7 +1503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vault/" class="md-nav__link">
+      <a href="../../nova-core-collection/vault/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1518,7 +1524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vcenter_vmtools_policy/" class="md-nav__link">
+      <a href="../../nova-core-collection/vcenter_vmtools_policy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1539,7 +1545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win_configure_rdp/" class="md-nav__link">
+      <a href="../../nova-core-collection/win_configure_rdp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1560,7 +1566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win_dc_post_reboot_check/" class="md-nav__link">
+      <a href="../../nova-core-collection/win_dc_post_reboot_check/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1581,7 +1587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win_sysprep/" class="md-nav__link">
+      <a href="../../nova-core-collection/win_sysprep/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1602,7 +1608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win_test_pending_reboot/" class="md-nav__link">
+      <a href="../../nova-core-collection/win_test_pending_reboot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1650,36 +1656,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
+  <a href="#base-template-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Requirements
+      Base template requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Base template requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#role-variables" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
     <span class="md-ellipsis">
-      Role Variables
+      Linux
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#per-environmentprojectdatacenter-etc-template-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      Per-environment/project/datacenter etc. template requirements
     </span>
   </a>
   
@@ -1703,19 +1715,49 @@
   
 
 
-<h1 id="deploy_vars">deploy_vars</h1>
-<p>This role is used to set required deploy variables. Is is used as the very first role in the deploy process. By using this role, we can ensure that all required variables are set before any other roles are executed. This role also caches the required variables in a file so that they can be used by other roles.</p>
-<h2 id="requirements">Requirements</h2>
-<p>none</p>
-<h2 id="role-variables">Role Variables</h2>
-<p>Refer to the <a href="https://github.com/novateams/nova.core/blob/main/nova/core/roles/deploy_vars/defaults/main.yml">defaults/main.yml</a> file for a list and description of the variables used in this role.</p>
-<h2 id="dependencies">Dependencies</h2>
-<p>none</p>
-<h2 id="example">Example</h2>
-<pre><code class="language-yaml">- name: Including deploy_vars role...
-  ansible.builtin.include_role:
-    name: nova.core.deploy_vars
-</code></pre>
+<h1 id="vm-template-requirements">VM Template Requirements</h1>
+<p>When using Catapult with a cloud provider you can just use the VM templates provided by the cloud provider. When using Catapult in your own private cloud you need to make sure that the VM templates your create are compatible with Catapult.</p>
+<p>One great tool for template generation is <a href="https://www.packer.io/">Packer</a>. Packer can be used to create base images for all major cloud providers and also for local virtualization solutions like VirtualBox or VMWare. We recommend using Packer for creating base images for yourself and then using Catapult to create per-environment/project/datacenter etc. templates based on the base images. Alternatively you can just install the base templates manually.</p>
+<h2 id="base-template-requirements">Base template requirements</h2>
+<p>However you install your base templates make sure that they meet the following requirements. These configurations need to be present for initial configuration to the VMs to work. After the initial configuration is done you can change these configurations to whatever you want.</p>
+<h3 id="windows">Windows</h3>
+<ul>
+<li>
+<p>Latest stable OpenSSH installed and running -- Catapult does all of its work over SSH. Don't use the built-in Windows SSH server it's versions are different per OS version and you will start getting random connection errors.</p>
+</li>
+<li>
+<p><code>MaxAuthTries</code> set to <code>20</code> in <code>C:/ProgramData/ssh/sshd_config</code> -- A lot of users will have more than 6 keys in their SSH agent and the default <code>MaxAuthTries</code> of 6 will cause Catapult to fail to connect to the VM. The value must not be 20 but it most likely must be higher than 6.</p>
+</li>
+<li>
+<p>(Optional) <a href="https://chocolatey.org/install">Chocolatey</a> installed -- It's not a hard requirement but it's really useful to have Chocolatey installed on your Windows VMs. Catapult can use Chocolatey to install the required software on the VMs. Chocolatey can also be used to install the OpenSSH server on the base template with <code>choco install openssh -params /SSHServerFeature -y</code></p>
+</li>
+</ul>
+<h3 id="linux">Linux</h3>
+<ul>
+<li>
+<p>SSH server installed and running -- Catapult does all of its work over SSH.</p>
+</li>
+<li>
+<p><code>MaxAuthTries</code> set to <code>20</code> in <code>/etc/ssh/sshd_config</code> -- Same as with Windows.</p>
+</li>
+<li>
+<p><code>PermitRootLogin</code> set to <code>yes</code> in <code>/etc/ssh/sshd_config</code> -- Catapult needs to be able to login as root to the VMs the first time. After that Catapult can be used to create new accounts and disable root login.</p>
+</li>
+<li>
+<p><code>PasswordAuthentication</code> set to <code>yes</code> in <code>/etc/ssh/sshd_config</code> -- It is usually set to yes for most Linux distributions but it's good to check.</p>
+</li>
+<li>
+<p><code>sudo</code> package needs to be installed for your distribution.</p>
+</li>
+<li>
+<p><code>python3</code> package needs to be installed for your distribution.</p>
+</li>
+<li>
+<p><code>open-vm-tools</code> package might need to be installed for your distribution depending on your virtualization platform.</p>
+</li>
+</ul>
+<h2 id="per-environmentprojectdatacenter-etc-template-requirements">Per-environment/project/datacenter etc. template requirements</h2>
+<p>We recommend applying the <a href="https://github.com/ClarifiedSecurity/nova.core/tree/main/nova/core/roles/template_os_configuration">template_os_configuration</a> to the specific project templates. It contains some prerequisites for different <code>nova.core</code> roles that you might otherwise need to install before using those roles.</p>
 
 
 
