@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     
       
@@ -649,9 +649,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-vm-snapshot" class="md-nav__link">
+  <a href="#ctp-vm-snapshot-create" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp vm snapshot
+      ctp vm snapshot-create
     </span>
   </a>
   
@@ -2359,9 +2359,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ctp-vm-snapshot" class="md-nav__link">
+  <a href="#ctp-vm-snapshot-create" class="md-nav__link">
     <span class="md-ellipsis">
-      ctp vm snapshot
+      ctp vm snapshot-create
     </span>
   </a>
   
@@ -2833,18 +2833,18 @@
 </ul>
 <pre><code class="language-zsh">ctp vm rename &lt;inventory_hostname&gt; -e new_vm_name=&lt;new_name&gt;
 </code></pre>
-<h3 id="ctp-vm-snapshot">ctp vm snapshot</h3>
+<h3 id="ctp-vm-snapshot-create">ctp vm snapshot-create</h3>
 <p>Shuts down the VM, creates a snapshot and powers the VM back on.</p>
 <p><em>Example usage:</em></p>
 <ul>
 <li>Creates a snapshot of the VM for the given inventory_hostname with the default snapshot name</li>
 </ul>
-<pre><code class="language-zsh">ctp vm snapshot &lt;inventory_hostname&gt;
+<pre><code class="language-zsh">ctp vm snapshot-create &lt;inventory_hostname&gt;
 </code></pre>
 <ul>
 <li>Creates a snapshot of the VM for the given inventory_hostname with the given snapshot name</li>
 </ul>
-<pre><code class="language-zsh">ctp vm snapshot &lt;inventory_hostname&gt; -e snapshot_name=&lt;snapshot_name&gt;
+<pre><code class="language-zsh">ctp vm snapshot-create &lt;inventory_hostname&gt; -e snapshot_name=&lt;snapshot_name&gt;
 </code></pre>
 <h3 id="ctp-vm-snapshot-create-clean">ctp vm snapshot-create-clean</h3>
 <p>Remove all existing snapshots and create a new snapshot of the VM</p>
@@ -2865,12 +2865,12 @@
 <ul>
 <li>Creates a live snapshot of the VM for the given inventory_hostname</li>
 </ul>
-<pre><code class="language-zsh">ctp vm snapshot-live &lt;inventory_hostname&gt;
+<pre><code class="language-zsh">ctp vm snapshot-create-live &lt;inventory_hostname&gt;
 </code></pre>
 <ul>
 <li>Creates a live snapshot of the VM for the given inventory_hostname with the given snapshot name</li>
 </ul>
-<pre><code class="language-zsh">ctp vm snapshot-live &lt;inventory_hostname&gt; -e snapshot_name=&lt;snapshot_name&gt;
+<pre><code class="language-zsh">ctp vm snapshot-create-live &lt;inventory_hostname&gt; -e snapshot_name=&lt;snapshot_name&gt;
 </code></pre>
 <h3 id="ctp-vm-snapshot-revert">ctp vm snapshot-revert</h3>
 <p>Revert to the latest default snapshot or to the given snapshot name</p>
