@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -1718,6 +1718,7 @@ hostname: # This is the hostname that will be set for the host
 domain: # This is the domain that will be set for the host
 ad_domain_name: &quot;{{ domain }}&quot;
 fqdn: &quot;{{ hostname }}.{{ domain }}&quot;
+project_fullname: # This is the full name of the project
 </code></pre>
 <p>Although there are some variables available to this role, it recommended to only set values for variables defined in the example below. This is a kickstart role and should be used as such. Advanced users can install the individual roles separately for more control.</p>
 <p><code>-e monolith_single_service=service_name</code> can be appended to command line to only configure single service after the initial setup.</p>
@@ -1788,6 +1789,37 @@ dependencies:
       vault_ldaps_url: ldaps://dc1.example.com # This is the LDAP server that will be used for Vault
       vault_userdn: OU=Users,DC=example,DC=com # This is the search base for users in LDAP
       vault_ldap_admin_group_name: vault-admins # This is the LDAP group that will have admin access to Vault
+
+      vault_create_root_ca: true # Create a self-signed root CA
+      vault_create_intermediate_ca: true # Create an intermediate CA (signed by the root CA)
+
+      vault_root_ca_pki_engine_name: RootCA
+      vault_root_ca_name: &quot;{{ project_fullname | upper }} RootCA&quot;
+      vault_root_ca_ou: &quot;{{ project_fullname | upper }}&quot;
+      vault_root_ca_org: &quot;{{ project_fullname | upper }} Project&quot;
+      vault_root_ca_country: EU
+      vault_root_ca_key_type: ec
+      vault_root_ca_key_bits: 384
+      vault_root_ca_crl_distribution_points: https://{{ monolith_vault_fqdn }}/v1/{{ vault_root_ca_pki_engine_name }}/crl/pem
+      vault_root_ca_issuing_certificates: https://{{ monolith_vault_fqdn }}/v1/{{ vault_root_ca_pki_engine_name }}/ca/pem
+
+      vault_intermediate_ca_pki_engine_name: IntermediateCA
+      vault_intermediate_ca_name: &quot;{{ project_fullname | upper }} IntermediateCA&quot;
+      vault_intermediate_ca_ou: &quot;{{ project_fullname | upper }}&quot;
+      vault_intermediate_ca_org: &quot;{{ project_fullname | upper }} Project&quot;
+      vault_intermediate_ca_country: EU
+      vault_intermediate_ca_key_type: ec
+      vault_intermediate_ca_key_bits: 384
+      vault_intermediate_ca_crl_distribution_points: https://{{ monolith_vault_fqdn }}/v1/{{ vault_intermediate_ca_pki_engine_name }}/crl/pem
+      vault_intermediate_ca_issuing_certificates: https://{{ monolith_vault_fqdn }}/v1/{{ vault_intermediate_ca_pki_engine_name }}/ca/pem
+
+      vault_server_rsa_ou: &quot;{{ project_fullname | upper }}&quot;
+      vault_server_rsa_organization: &quot;{{ project_fullname | upper }} Project&quot;
+      vault_server_rsa_country: EU
+
+      vault_server_ec_ou: &quot;{{ project_fullname | upper }}&quot;
+      vault_server_ec_organization: &quot;{{ project_fullname | upper }} Project&quot;
+      vault_server_ec_country: EU
 
       #########
       # Nexus #
@@ -1877,7 +1909,7 @@ dependencies:
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>
